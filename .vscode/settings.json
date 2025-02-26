@@ -1,6 +1,13 @@
 {
     "cSpell.words": [
+        "anteskogs",
+        "asgiref",
+        "gunicorn",
         "herokuapp",
+        "psycopg",
+        "setuptools",
+        "sqlparse",
+        "tzdata",
         "umibg"
     ]
 }

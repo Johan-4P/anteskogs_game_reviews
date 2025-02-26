@@ -1,1 +1,1 @@
-web: gunicorn anteskogs_game_reviews.wsgi
+web: gunicorn game_reviews.wsgi --log-file -
