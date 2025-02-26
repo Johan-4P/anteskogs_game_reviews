@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Game List</h1>
+{% for game in object_list %}
+    <h2>{{ game.title }}</h2>
+    <p>{{ game.excerpt }}</p>
+    <p>Author: {{ game.author }}</p>
+{% endfor %}
+{% endblock %}
