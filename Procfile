@@ -1,0 +1,1 @@
+web: gunicorn anteskogs_game_reviews.wsgi
