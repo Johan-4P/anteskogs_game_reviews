@@ -8,6 +8,7 @@
         "setuptools",
         "sqlparse",
         "tzdata",
-        "umibg"
+        "umibg",
+        "wsgi"
     ]
 }
