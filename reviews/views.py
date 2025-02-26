@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Game
 # Create your views here.
 
-def reviews(request):
-    return HttpResponse('This is the reviews page')
+class GameList(generic.ListView):
+    queryset = Game.objects.all()
+    template_name = 'reviews/game_list.html'
