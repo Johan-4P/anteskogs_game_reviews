@@ -92,22 +92,22 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.game-link {
     text-decoration: none;
     color: #445261;
 }
 
-.post-link:hover,
+.game-link:hover,
 .page-link {
     color: #E84610;
 }
 
-.post-title {
+.game-title {
     margin-top: 10%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.game-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
