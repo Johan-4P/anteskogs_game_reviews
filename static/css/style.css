@@ -41,9 +41,10 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
+    margin: 0px 20px;
+    bottom: -17%;
     min-width: 30%;
-    left: -2px;
+    left: 50%;
     background-color: #188181;
 }
 
@@ -92,22 +93,22 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.game-link {
     text-decoration: none;
     color: #445261;
 }
 
-.post-link:hover,
-.page-link {
+.game-link:hover,
+.game-link {
     color: #E84610;
 }
 
-.post-title {
+.game-title {
     margin-top: 10%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.game-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
