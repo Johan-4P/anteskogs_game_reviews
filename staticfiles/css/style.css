@@ -34,6 +34,10 @@ body {
     border: none;
     background-color: transparent;
 }
+.card-img-top {
+    width: 50%;
+    object-fit: cover;
+}
 
 .image-container {
     position: relative;
@@ -99,7 +103,7 @@ body {
 }
 
 .game-link:hover,
-.page-link {
+.game-link {
     color: #E84610;
 }
 
