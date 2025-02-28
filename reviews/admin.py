@@ -9,6 +9,7 @@ class GameAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
-    fields = ('title', 'slug', 'author', 'image', 'content', 'status', 'excerpt') 
+    fields = ('title', 'slug', 'author', 'featured_image', 'content', 'status', 'excerpt')  
+
 # Register your models here.
 admin.site.register(Comment)

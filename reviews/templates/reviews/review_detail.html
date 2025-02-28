@@ -11,7 +11,9 @@
                 <p class="game-subtitle">{{ game.author }} | {{ game.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{{ game.image.url }}" alt="{{ game.title }}" class="img-fluid">
+                {% if game.featured_image %}
+                <img src="{{ game.featured_image.url }}" alt="{{ game.title }}" class="img-fluid">
+                {% endif %}
             </div>
         </div>
     </div>

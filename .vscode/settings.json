@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "allauth",
+        "Anteskog's",
         "anteskogs",
         "asgiref",
         "forloop",
@@ -7,6 +9,8 @@
         "herokuapp",
         "psycopg",
         "setuptools",
+        "socialaccount",
+        "spel",
         "sqlparse",
         "summernote",
         "tzdata",
