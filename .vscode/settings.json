@@ -4,9 +4,11 @@
         "Anteskog's",
         "anteskogs",
         "asgiref",
+        "certifi",
         "forloop",
         "gunicorn",
         "herokuapp",
+        "idna",
         "psycopg",
         "setuptools",
         "socialaccount",
@@ -15,6 +17,9 @@
         "summernote",
         "tzdata",
         "umibg",
+        "urllib",
+        "webencodings",
+        "whitenoise",
         "wsgi"
     ]
 }
