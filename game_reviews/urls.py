@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('summernote/', include('django_summernote.urls')),
     path('reviews/', include('reviews.urls')),
     path('', include('reviews.urls')),  # Add this line to map the root URL to the reviews app

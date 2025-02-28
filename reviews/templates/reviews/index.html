@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}
+{% block title %}{% endblock %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -17,13 +17,12 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in game.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                  alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ game.featured_image.url }}"
-                                  alt="{{ game.title }}">
-                                {% endif %}
+                                {% if game.featured_image and game.featured_image.url != "placeholder" %}
+                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
+                            {% else %}
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default image">
+                            {% endif %}
+                            
                                 <div class="image-flash">
                                     <p class="author">Author: {{ game.author }}</p>
                                 </div>
