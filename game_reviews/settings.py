@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary_storage',
-    'cloudinary',
+    'cloudinary',  # Ensure this line is included
     'django_summernote',
     'reviews',
     'allauth',

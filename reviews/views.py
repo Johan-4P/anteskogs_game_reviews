@@ -4,7 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from .models import Game
 from .forms import GameForm
-# Create your views here.
+import logging
+
+logger = logging.getLogger(__name__)
 
 class GameList(generic.ListView):
     queryset = Game.objects.filter(status=1)
@@ -13,9 +15,6 @@ class GameList(generic.ListView):
 
 
 class GameDetail(generic.DetailView):
-    """
-    This view will display the detailed view of a single game.
-    """
     queryset = Game.objects.filter(status=1)
     template_name = 'reviews/review_detail.html'
 
@@ -30,11 +29,17 @@ def upload_game(request):
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
-            game = form.save(commit=False)
-            game.author = request.user
-            game.slug = slugify(game.title)  # Automatically generate the slug
-            game.save()
-            return redirect('reviews')  # Redirect to the reviews page
+            try:
+                game = form.save(commit=False)
+                game.author = request.user
+                game.slug = slugify(game.title)  # Automatically generate the slug
+                game.save()
+                return redirect('reviews')  # Redirect to the reviews page
+            except Exception as e:
+                logger.error(f"Error saving game: {e}")
+                form.add_error(None, "An error occurred while saving the game.")
+        else:
+            logger.error("Form is not valid")
     else:
         form = GameForm()
     return render(request, 'reviews/upload_game.html', {'form': form})
