@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary_storage',
-    'cloudinary',  # Ensure this line is included
+    'cloudinary', 
     'django_summernote',
     'reviews',
     'allauth',
@@ -145,6 +145,10 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
+SUMMERNOTE_CONFIG = {
+    'attachment_storage_class': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
