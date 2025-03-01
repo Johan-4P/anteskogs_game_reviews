@@ -18,8 +18,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if game.featured_image %}
-                                <img class="card-img-top" src="{{ game.featured_image.url }}"
-                                  alt="{{ game.title }}">
+                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ game.author }}</p>
