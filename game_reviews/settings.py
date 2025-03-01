@@ -145,9 +145,9 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Cloudinary-configuration
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': env('CLOUDINARY_API_KEY'),
-    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'default_value'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY', 'default_value'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET', 'default_value'),
 }
 SUMMERNOTE_CONFIG = {
     'attachment_storage_class': 'cloudinary_storage.storage.MediaCloudinaryStorage',
