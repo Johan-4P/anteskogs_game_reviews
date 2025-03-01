@@ -11,5 +11,11 @@ class GameAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
     fields = ('title', 'slug', 'author', 'featured_image', 'content', 'status', 'excerpt')  
 
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('author', 'game', 'created_on', 'approved')
+    list_filter = ('approved', 'created_on') 
+    search_fields = ('author__username', 'game__title', 'body')
+
 # Register your models here.
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)

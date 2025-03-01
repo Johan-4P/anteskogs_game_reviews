@@ -14,6 +14,14 @@ class GameList(generic.ListView):
     template_name = 'reviews/index.html'
     paginate_by = 6
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        for game in context['object_list']:
+            game.comment_count = game.comments.filter(approved=True).count()
+        return context
+
+
 
 class GameDetail(generic.DetailView):
     queryset = Game.objects.filter(status=1)
@@ -23,16 +31,26 @@ class GameDetail(generic.DetailView):
         queryset = self.get_queryset()
         slug = self.kwargs.get('slug')
         return get_object_or_404(queryset, slug=slug)
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         game = self.get_object()
-        comments = game.comments.filter(approved=True)
+
+        
+        comments = game.comments.all().order_by("-created_on")
         comment_count = comments.count()
         context["comments"] = comments
         context["comment_count"] = comment_count
-        context["comment_form"] = CommentForm()  # Add the comment form to the context
+
+        
+        context["comment_form"] = CommentForm()
+
+       
+        pending_comments = game.comments.filter(approved=False)
+        context["pending_comments"] = pending_comments
+
         return context
+
     
 
 @login_required
@@ -72,5 +90,37 @@ def add_comment(request, slug):
     else:
         messages.error(request, "Invalid request.")
         return redirect("review_detail", slug=game.slug)
+
+
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user != comment.author:
+        messages.error(request, "You are not allowed to edit this comment.")
+        return redirect('review_detail', slug=comment.game.slug)
+    
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Comment updated successfully.")
+            return redirect("review_detail", slug=comment.game.slug)
+    else:
+        form = CommentForm(instance=comment)
+    
+    return render(request, "reviews/edit_comment.html", {"form": form, "comment": comment})
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user != comment.author:
+        messages.error(request, "You are not allowed to delete this comment.")
+        return redirect('review_detail', slug=comment.game.slug)
+    
+    game_slug = comment.game.slug
+    comment.delete()
+    messages.success(request, "Comment deleted successfully.")
+    return redirect("review_detail", slug=game_slug)
 
 

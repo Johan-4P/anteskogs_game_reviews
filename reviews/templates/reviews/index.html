@@ -13,7 +13,7 @@
             <div class="row">
                 {% for game in game_list %}
                 <div class="col-md-4">
-                    
+
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -29,8 +29,10 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ game.created_on}}
-                            </p>
+                            <p class="card-text text-muted h6">{{ game.created_on }}</p>
+
+                            <!-- Visar kommentarantalet -->
+                            <p class="text-muted">Comments: {{ game.comment_count }}</p>
                         </div>
                     </div>
                 </div>
@@ -39,23 +41,21 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
+
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}"
-                  class="page-link">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
             <li>
-                <a href="?page={{ page_obj.next_page_number }}"
-                  class="page-link">NEXT &raquo;</a>
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
             </li>
             {% endif %}
         </ul>
