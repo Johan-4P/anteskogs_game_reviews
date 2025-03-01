@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
-from .models import Game
-from .forms import GameForm
+from .models import Game, Comment
+from .forms import GameForm, CommentForm
 import logging
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,16 @@ class GameDetail(generic.DetailView):
         queryset = self.get_queryset()
         slug = self.kwargs.get('slug')
         return get_object_or_404(queryset, slug=slug)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        game = self.get_object()
+        comments = game.comments.filter(approved=True)
+        comment_count = comments.count()
+        context["comments"] = comments
+        context["comment_count"] = comment_count
+        context["comment_form"] = CommentForm()  # Add the comment form to the context
+        return context
     
 
 @login_required
@@ -43,5 +54,23 @@ def upload_game(request):
     else:
         form = GameForm()
     return render(request, 'reviews/upload_game.html', {'form': form})
+
+
+@login_required
+def add_comment(request, slug):
+    game = get_object_or_404(Game, slug=slug)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.game = game
+            comment.author = request.user
+            comment.save()
+            messages.success(request, "Comment submitted and awaiting approval.")
+            return redirect("review_detail", slug=game.slug)
+
+    else:
+        messages.error(request, "Invalid request.")
+        return redirect("review_detail", slug=game.slug)
 
 
