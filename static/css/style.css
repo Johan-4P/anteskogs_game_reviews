@@ -1,16 +1,14 @@
-
 body {
-    background-color: #F9FAFC;
+    background-color: #22577A !important;  
+    color: #322f2f !important;
 }
 
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #e9e9f0;
+    color: #4A4A4F;
 }
-
-
 
 .thin {
     font-weight: 300;
@@ -32,9 +30,10 @@ body {
     border: none;
     background-color: transparent;
 }
+
 .card-img-top {
-    width: 50%;
-    object-fit: cover;
+    width: 50% !important;
+    object-fit: cover !important;
 }
 
 .image-container {
@@ -42,12 +41,12 @@ body {
 }
 
 .image-flash {
-    position: absolute;
-    margin: 0px 20px;
-    bottom: -17%;
-    min-width: 30%;
-    left: 50%;
-    background-color: #188181;
+    position: absolute !important;
+    margin: 0px 20px !important;
+    bottom: -17% !important;
+    min-width: 30% !important;
+    left: 50% !important;
+    background-color: #38A3A5 !important; 
 }
 
 .scale {
@@ -62,18 +61,18 @@ body {
 }
 
 .masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
+    margin-top: 10px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: inline-block !important;
+    height: 33vh !important;
+    width: 100% !important;
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
+    background-color: #445261 !important;
+    color: white !important;
+    position: relative !important;
 }
 
 .masthead-image {
@@ -82,27 +81,28 @@ body {
 }
 
 .masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 90% !important;
+    height: 100% !important;
+    width: 150% !important;
+    background: #445261 !important;
+    -webkit-transform: skew(15deg) !important;
+    -moz-transform: skew(15deg) !important;
+    transform: skew(15deg) !important;
+    z-index: 100 !important;
 }
 
 .game-link {
-    text-decoration: none;
-    color: #445261;
+    text-decoration: none !important;
+    color: #38A3A5 !important; 
 }
+
 
 .game-link:hover,
 .game-link {
-    color: #E84610;
+    color: #80ED99 !important; 
 }
 
 .game-title {
@@ -117,18 +117,18 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background-color: #22577A !important; 
+    color: #fff !important;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #fff !important;
+    color: #57C699 !important;  
 }
 
 .link {
-    color: #23BBBB;
+    color: #57C699;  
     text-decoration: none;
 }
 
@@ -139,21 +139,21 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
+    color: #E84610 !important; 
+    border: none !important;
+    background: transparent !important;
 }
 
 .btn-delete {
-    color: #fff;
-    background: #E84610;
+    color: #fff !important;
+    background: #E84610 !important; 
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+    color: #E84610 !important; 
+    background: transparent !important;
+    border: none !important;
 }
 
 .faded {
@@ -163,6 +163,7 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
 ul {
     list-style-position: inside;
 }
