@@ -7,12 +7,10 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #e9e9f0;
 }
 
-.red-o {
-    color: #E84610;
-}
+
 
 .thin {
     font-weight: 300;
@@ -164,4 +162,7 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+ul {
+    list-style-position: inside;
 }

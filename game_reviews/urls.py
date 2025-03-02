@@ -24,5 +24,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('reviews/', include('reviews.urls')),
     path('accounts/', include('allauth.urls')),
-    path('', include('reviews.urls')),  # Map the root URL to the reviews app
+    path('about/', include('about.urls'), name='about-urls'), 
+    path('', include('reviews.urls')),  
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

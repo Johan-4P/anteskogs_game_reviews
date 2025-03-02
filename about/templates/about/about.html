@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-4 text-center">
+            <img src="{% static 'images\jag.jpg' %}" width="75%" />
+        </div>
+        <div class="col-8">
+            <!-- Title goes between these h2 tags -->
+            <h2>{{ about.title }}</h2>
+           
+            Hello my name is Johan and im studying to be a Full-stack developer.
+            And this is one of my projects, my third project for to be exact.
+            You can find all my projects on github, just search for Johan-4P and you should find me.
+            I hope you enjoy my projects and if you have any questions or feedback, feel free to contact me.
+            Have a great day!
+            
+            {{ about.content | safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-right">
+            <!-- Updated on field goes in here -->
+
+            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
