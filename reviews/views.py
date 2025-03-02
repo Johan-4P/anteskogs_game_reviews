@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
@@ -9,17 +10,15 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+class HomeView(TemplateView):
+    template_name = 'reviews/home.html'
+
+
+
 class GameList(generic.ListView):
     queryset = Game.objects.filter(status=1)
     template_name = 'reviews/index.html'
     paginate_by = 6
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        
-        for game in context['object_list']:
-            game.comment_count = game.comments.filter(approved=True).count()
-        return context
 
 
 
@@ -35,22 +34,12 @@ class GameDetail(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         game = self.get_object()
-
-        
-        comments = game.comments.all().order_by("-created_on")
+        comments = game.comments.filter(approved=True)
         comment_count = comments.count()
         context["comments"] = comments
         context["comment_count"] = comment_count
-
-        
-        context["comment_form"] = CommentForm()
-
-       
-        pending_comments = game.comments.filter(approved=False)
-        context["pending_comments"] = pending_comments
-
+        context["comment_form"] = CommentForm()  # Add the comment form to the context
         return context
-
     
 
 @login_required

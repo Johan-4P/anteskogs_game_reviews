@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Introduction{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Welcome to Game Reviews!</h1>
+    <p>This is your go-to platform for reviewing and discovering new games.</p>
+    <p>Here are some features you can explore:</p>
+    <ul>
+        <li><strong>Reviews:</strong> Read and write reviews for your favorite games.</li>
+        <li><strong>Upload a Game:</strong> Share your own games with the community.</li>
+        <li><strong>Community:</strong> Connect with other gamers and share your experiences.</li>
+    </ul>
+    <p>Get started by logging in or signing up!</p>
+</div>
+
+    <!-- Button to navigate to Reviews -->
+    <div class="mt-4">
+        <a href="{% url 'reviews' %}" class="btn btn-primary me-2">Explore Reviews</a>
+        <a href="{% url 'upload_game' %}" class="btn btn-secondary me-2">Upload a Game</a>
+        <a href="{% url 'account_login' %}" class="btn btn-success">Login</a>
+    </div>
+    
+{% endblock %}

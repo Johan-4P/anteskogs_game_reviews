@@ -21,5 +21,6 @@
         "webencodings",
         "whitenoise",
         "wsgi"
-    ]
+    ],
+    "CodeGPT.apiKey": "OpenAI"
 }
