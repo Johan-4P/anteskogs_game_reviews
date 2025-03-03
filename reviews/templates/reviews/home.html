@@ -4,23 +4,24 @@
 
 {% block content %}
 <div class="container mt-5 text-center">
-    <h1>Welcome to Game Reviews!</h1>
+    <h1>Welcome to Anteskog's Game Reviews!</h1>
     <p>This is your go-to platform for reviewing and discovering new games.</p>
     <p>Here are some features you can explore:</p>
+    <!-- List of features -->
     <ul>
         <li><strong>Reviews:</strong> Read and write reviews for your favorite games.</li>
         <li><strong>Upload a Game:</strong> Share your own games with the community.</li>
         <li><strong>Community:</strong> Connect with other gamers and share your experiences.</li>
-        <li><strong>Comments:</strong></li>
+        <li><strong>Comments:</strong> Leave your thoughts and feedback on game reviews.</li>
     </ul>
     <p>Get started by logging in or signing up!</p>
 </div>
 
 <!-- Buttons to navigate to Reviews, Login, and Sign Up -->
 <div class="mt-4 text-center">
-    <a href="{% url 'reviews' %}" class="btn btn-primary me-2">Explore Reviews</a>
-    <a href="{% url 'account_login' %}" class="btn btn-success me-2">Login</a>
-    <a href="{% url 'account_signup' %}" class="btn btn-info">Sign Up</a>
+    <a href="{% url 'reviews' %}" class="btn btn-modern me-2">Explore Reviews</a>
+    <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
+    <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
 </div>
 
 {% endblock %}
