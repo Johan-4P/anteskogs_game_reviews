@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
+from django.db.models import Count
 from .models import Game, Comment
 from .forms import GameForm, CommentForm
 import logging
@@ -14,12 +15,12 @@ class HomeView(TemplateView):
     template_name = 'reviews/home.html'
 
 
-
 class GameList(generic.ListView):
-    queryset = Game.objects.filter(status=1)
     template_name = 'reviews/index.html'
     paginate_by = 6
 
+    def get_queryset(self):
+        return Game.objects.filter(status=1).annotate(comment_count=Count('comments'))
 
 
 class GameDetail(generic.DetailView):
@@ -38,7 +39,7 @@ class GameDetail(generic.DetailView):
         comment_count = comments.count()
         context["comments"] = comments
         context["comment_count"] = comment_count
-        context["comment_form"] = CommentForm()  # Add the comment form to the context
+        context["comment_form"] = CommentForm() 
         return context
     
 
@@ -50,9 +51,9 @@ def upload_game(request):
             try:
                 game = form.save(commit=False)
                 game.author = request.user
-                game.slug = slugify(game.title)  # Automatically generate the slug
+                game.slug = slugify(game.title)  
                 game.save()
-                return redirect('reviews')  # Redirect to the reviews page
+                return redirect('reviews') 
             except Exception as e:
                 logger.error(f"Error saving game: {e}")
                 form.add_error(None, "An error occurred while saving the game.")
