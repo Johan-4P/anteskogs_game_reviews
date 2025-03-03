@@ -3,6 +3,7 @@ from .models import Game, Comment
 from django_summernote.widgets import SummernoteWidget
 
 
+
 class GameForm(forms.ModelForm):
     class Meta:
         model = Game
@@ -19,3 +20,5 @@ class CommentForm(forms.ModelForm):
         labels = {
             'body': 'Comment',
         }
+
+

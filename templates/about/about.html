@@ -29,7 +29,7 @@
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
         <form method="post">
-            {{ collaborate_form | crispy }}
+            {{ contact_form | crispy }}  <!-- Updated form name -->
             {% csrf_token %}
             <button class="btn btn-modern" type="submit">Submit</button>
           </form>
