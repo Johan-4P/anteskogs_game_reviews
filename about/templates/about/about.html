@@ -28,11 +28,13 @@
 
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
-        <form method="post">
+        <div class="form-box">
+        <form method="post" class="styled-form">
             {{ collaborate_form | crispy }}
             {% csrf_token %}
             <button class="btn btn-modern" type="submit">Submit</button>
           </form>
+        </div>
     </div>
 </div>
 {% endblock content %}

@@ -7,6 +7,7 @@
     <h1>Welcome to Anteskog's Game Reviews!</h1>
     <p>This is your go-to platform for reviewing and discovering new games.</p>
     <p>Here are some features you can explore:</p>
+
     <!-- List of features -->
     <ul>
         <li><strong>Reviews:</strong> Read and write reviews for your favorite games.</li>
@@ -20,8 +21,13 @@
 <!-- Buttons to navigate to Reviews, Login, and Sign Up -->
 <div class="mt-4 text-center">
     <a href="{% url 'reviews' %}" class="btn btn-modern me-2">Explore Reviews</a>
-    <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
-    <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'account_logout' %}" class="btn btn-modern me-2">Logout</a>
+        <a href="{% url 'upload_game' %}" class="btn btn-modern">Upload a Game</a>
+    {% else %}
+        <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
+    {% endif %}
 </div>
 
 {% endblock %}
