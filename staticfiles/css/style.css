@@ -115,16 +115,45 @@ body {
     color: lightgray;
 }
 
-.btn-signup,
+
 .btn-edit {
     background-color: #22577A !important; 
     color: #fff !important;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff !important;
-    color: #57C699 !important;  
+
+.btn-modern {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px; 
+    background-color: #22577A; 
+    color: #fff; 
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.btn-modern:hover {
+    background-color: #38A3A5;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Active effect (when button is clicked) */
+.btn-modern:active {
+    background-color: #57C699; 
+    transform: scale(0.98); 
+}
+
+.login {
+    background-color: #247b7d;
+}
+.btn-delete {
+    background-color: #E84610 !important; 
+    color: #fff !important;
 }
 
 .link {
