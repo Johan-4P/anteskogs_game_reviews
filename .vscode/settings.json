@@ -5,6 +5,7 @@
         "anteskogs",
         "asgiref",
         "certifi",
+        "Colour",
         "forloop",
         "gunicorn",
         "herokuapp",
@@ -20,6 +21,7 @@
         "urllib",
         "webencodings",
         "whitenoise",
+        "Wireframes",
         "wsgi"
     ],
     "CodeGPT.apiKey": "OpenAI"

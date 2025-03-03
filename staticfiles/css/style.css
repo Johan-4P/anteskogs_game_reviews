@@ -95,14 +95,13 @@ body {
 }
 
 .game-link {
-    text-decoration: none !important;
-    color: #38A3A5 !important; 
+    text-decoration: none;
+    color: #38A3A5; 
 }
-
 
 .game-link:hover,
 .game-link {
-    color: #80ED99 !important; 
+    color: #80ED99; 
 }
 
 .game-title {
@@ -156,16 +155,6 @@ body {
     color: #fff !important;
 }
 
-.link {
-    color: #57C699;  
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
 
 .btn-like {
     color: #E84610 !important; 
@@ -195,4 +184,24 @@ body {
 
 ul {
     list-style-position: inside;
+}
+
+/* Styling for the form container */
+.form-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Styling for the form elements */
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
