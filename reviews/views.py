@@ -113,4 +113,23 @@ def delete_comment(request, comment_id):
     messages.success(request, "Comment deleted successfully.")
     return redirect("review_detail", slug=game_slug)
 
+@login_required
+def edit_game(request, slug):
+    game = get_object_or_404(Game, slug=slug)
+    
+    
+    if game.author != request.user:
+        messages.error(request, "You are not allowed to edit this game.")
+        return redirect('review_detail', slug=game.slug)
+
+    if request.method == "POST":
+        form = GameForm(request.POST, request.FILES, instance=game)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Game updated successfully.")
+            return redirect("review_detail", slug=game.slug)
+    else:
+        form = GameForm(instance=game)
+
+    return render(request, "reviews/edit_game.html", {"form": form, "game": game})
 
