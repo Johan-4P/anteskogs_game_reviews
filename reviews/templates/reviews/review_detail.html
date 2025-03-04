@@ -26,9 +26,13 @@
                 <p class="card-text">
                     {{ game.content | safe }}
                 </p>
+
                 {% if user == game.author %}
-                <a href="{% url 'edit_game' slug=game.slug %}" class="btn btn-modern ">Edit Game</a>
+                <a href="{% url 'edit_game' slug=game.slug %}" class="btn btn-modern">Edit Game</a>
+                <a href="{% url 'delete_game' slug=game.slug %}"
+                    onclick="return confirm('Are you sure you want to delete this game?')" class="btn btn-modern btn-delete">Delete Game</a>
                 {% endif %}
+
             </div>
         </div>
     </div>

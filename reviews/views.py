@@ -133,3 +133,18 @@ def edit_game(request, slug):
 
     return render(request, "reviews/edit_game.html", {"form": form, "game": game})
 
+
+@login_required
+def delete_game(request, slug):
+    game = get_object_or_404(Game, slug=slug)
+
+    # Controll if the user is the author of the game
+    if game.author != request.user:
+        messages.error(request, "You are not allowed to delete this game.")
+        return redirect('review_detail', slug=game.slug)
+
+    # Delete the game
+    game_slug = game.slug
+    game.delete()
+    messages.success(request, "Game deleted successfully.")
+    return redirect('reviews')  # Redirect to the home page
