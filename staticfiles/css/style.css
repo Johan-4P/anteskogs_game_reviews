@@ -10,6 +10,7 @@ body {
     color: #4A4A4F;
 }
 
+
 .thin {
     font-weight: 300;
 }
@@ -33,7 +34,7 @@ body {
 
 .card-img-top {
     width: 50% !important;
-    object-fit: cover !important;
+    /* object-fit: cover !important; */
 }
 
 .image-container {
@@ -61,12 +62,12 @@ body {
 }
 
 .masthead {
-    margin-top: 10px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    display: inline-block !important;
-    height: 33vh !important;
-    width: 100% !important;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
 }
 
 .masthead-text {
@@ -81,17 +82,17 @@ body {
 }
 
 .masthead-image:after {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 90% !important;
-    height: 100% !important;
-    width: 150% !important;
-    background: #445261 !important;
-    -webkit-transform: skew(15deg) !important;
-    -moz-transform: skew(15deg) !important;
-    transform: skew(15deg) !important;
-    z-index: 100 !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
 }
 
 .game-link {
@@ -204,4 +205,13 @@ ul {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .masthead {
+        height: 15vh;
+    }
 }

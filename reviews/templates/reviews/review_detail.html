@@ -19,6 +19,13 @@
     </div>
 </div>
 
+<!-- Add the image for mobile view -->
+<div class="container d-md-none mt-3">
+    {% if game.featured_image %}
+    <img src="{{ game.featured_image.url }}" alt="{{ game.title }}" class="img-fluid">
+    {% endif %}
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">

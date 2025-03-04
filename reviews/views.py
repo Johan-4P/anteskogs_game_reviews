@@ -138,7 +138,7 @@ def edit_game(request, slug):
 def delete_game(request, slug):
     game = get_object_or_404(Game, slug=slug)
 
-    # Controll if the user is the author of the game
+    # Control if the user is the author of the game
     if game.author != request.user:
         messages.error(request, "You are not allowed to delete this game.")
         return redirect('review_detail', slug=game.slug)
