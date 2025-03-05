@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
+    'widget_tweaks',
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -174,5 +175,5 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/list'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = {'username'}  # Replace ACCOUNT_AUTHENTICATION_METHOD
+ACCOUNT_AUTHENTICATION_METHOD = 'username'  # Ensure this is correctly set
 ACCOUNT_EMAIL_REQUIRED = True

@@ -1,10 +1,14 @@
 body {
-    background-image: url("/static/images/gaming-background.jpg");
+    background: url("/static/images/gaming-background.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-color: #22577A;
-    color: #322f2f;
+    background-color: #22577A;  
+    color: #fff;
+}
+.text-box {
+    background: #0000008f;
+}
+.home-img {
+    width: 50%;
 }
 
 .brand {
@@ -26,9 +30,9 @@ body {
     background-color: #d2d7dc;
 }
 
-.main-bg {
+/* .main-bg {
     background-color: #F9FAFC;
-}
+} */
 
 .card {
     border: none;
@@ -148,9 +152,7 @@ body {
     transform: scale(0.98); 
 }
 
-.login {
-    background-color: #247b7d;
-}
+
 .btn-delete {
     background-color: #E84610 !important; 
     color: #fff !important;
@@ -186,25 +188,7 @@ ul {
     list-style-position: inside;
 }
 
-/* Styling for the form container */
-.form-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
 
-/* Styling for the form elements */
-.styled-form input[type="text"],
-.styled-form input[type="email"],
-.styled-form textarea {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
 
 /* Media Queries */
 
