@@ -188,9 +188,9 @@ ul {
     list-style-position: inside;
 }
 
-.forms-width {
+#id_name, #id_email, #id_subject, #id_body, #id_message {
     width: 65% !important;
-    margin: 0 auto !important;
+
 }
 
 /* Media Queries */

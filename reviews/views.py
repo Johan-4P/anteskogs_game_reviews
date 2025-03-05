@@ -148,3 +148,7 @@ def delete_game(request, slug):
     game.delete()
     messages.success(request, "Game deleted successfully.")
     return redirect('reviews')  # Redirect to the home page
+
+
+def thanks(request):
+    return render(request, 'about/thanks.html')

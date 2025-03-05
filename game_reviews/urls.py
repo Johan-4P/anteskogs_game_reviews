@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from reviews import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('accounts/', include('allauth.urls')), 
     path('about/', include('about.urls'), name='about-urls'), 
+    path('thanks/', views.thanks, name='thanks'),
     path('', include('reviews.urls')),  
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import About
 from .forms import ContactMeForm
@@ -8,17 +8,22 @@ def about_me(request):
         contact_form = ContactMeForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(request, messages.SUCCESS, "Message received! I endeavour to respond within 2 working days.")
+            
+            return redirect('thanks')
+        else:
+           
+            messages.error(request, 'There was an error sending your message. Please try again.')
+            return render(request, 'about/about.html', {'contact_form': contact_form})
 
-    about = About.objects.all()
+    about = About.objects.first()  
     contact_form = ContactMeForm()
 
     return render(
         request,
         "about/about.html",
-        {"about": about,
-        "contact_form": contact_form
-        }
+        {"about": about, "contact_form": contact_form}
     )
 
 
+def thanks(request):
+    return render(request, 'about/thanks.html')
