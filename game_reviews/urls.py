@@ -22,6 +22,7 @@ from reviews import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/games/', include('user_games.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('reviews/', include('reviews.urls')),
     path('accounts/', include('allauth.urls')), 

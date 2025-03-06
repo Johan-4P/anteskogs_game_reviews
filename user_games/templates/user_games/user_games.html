@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>Your Uploaded Games</h2>
+    
+    {% if games %}
+        <ul>
+        {% for game in games %}
+            <li>
+                <a href="{% url 'user_games:edit_game' game.id %}" class="btn-modern">{{ game.title }}</a>
+                <a href="{% url 'user_games:delete_game' game.id %}" onclick="return confirm('Är du säker på att du vill ta bort detta spel?')" class="btn-modern btn-delete">Delete</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have not loaded up any games yet.</p>
+    {% endif %}
+{% endblock %}

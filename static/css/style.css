@@ -184,6 +184,9 @@ body {
     color: rgb(222, 146, 168);
 }
 
+.alert-warning {
+    width: 50%;
+}
 ul {
     list-style-position: inside;
 }

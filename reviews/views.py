@@ -36,10 +36,14 @@ class GameDetail(generic.DetailView):
         context = super().get_context_data(**kwargs)
         game = self.get_object()
         comments = game.comments.filter(approved=True)
-        comment_count = comments.count()
+        pending_comments = game.comments.filter(approved=False)
+        user_comments_pending = pending_comments.filter(author=self.request.user) if self.request.user.is_authenticated else []
+
         context["comments"] = comments
-        context["comment_count"] = comment_count
-        context["comment_form"] = CommentForm() 
+        context["pending_comments_count"] = pending_comments.count()
+        context["user_comments_pending"] = user_comments_pending
+        context["comment_count"] = comments.count()
+        context["comment_form"] = CommentForm()
         return context
     
 
@@ -147,7 +151,7 @@ def delete_game(request, slug):
     game_slug = game.slug
     game.delete()
     messages.success(request, "Game deleted successfully.")
-    return redirect('reviews')  # Redirect to the home page
+    return redirect('reviews') 
 
 
 def thanks(request):
