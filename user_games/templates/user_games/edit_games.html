@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Redigera spelet: {{ game.title }}</h2>
+    <h2>Edit Game: {{ game.title }}</h2>
 
     <form method="post">
         {% csrf_token %}

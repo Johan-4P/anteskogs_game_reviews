@@ -1,19 +1,28 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
-    <h2>Your Uploaded Games</h2>
-    
-    {% if games %}
-        <ul>
+<div class="container mt-5">
+    <h2>Your Games</h2>
+    <div class="row">
         {% for game in games %}
-            <li>
-                <a href="{% url 'user_games:edit_game' game.id %}" class="btn-modern">{{ game.title }}</a>
-                <a href="{% url 'user_games:delete_game' game.id %}" onclick="return confirm('Är du säker på att du vill ta bort detta spel?')" class="btn-modern btn-delete">Delete</a>
-            </li>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if game.featured_image %}
+                        <img class="card-img-top" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'review_detail' game.slug %}" class="game-link">
+                        <h2 class="card-title">{{ game.title }}</h2>
+                    </a>
+                    <p class="card-text">{{ game.excerpt }}</p>
+                    <hr />
+                    <p class="card-text text-muted h6">{{ game.created_on }}</p>
+                    <p class="text-muted">Comments: {{ game.comment_count }}</p>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-        </ul>
-    {% else %}
-        <p>You have not loaded up any games yet.</p>
-    {% endif %}
+    </div>
+</div>
 {% endblock %}
