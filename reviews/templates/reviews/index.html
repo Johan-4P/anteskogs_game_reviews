@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{% endblock %}
+{% block title %}Game Reviews{% endblock %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -26,7 +26,7 @@
                             </a>
                             <div class="text-box">
                                 <p class="card-text">{{ game.excerpt }}</p> <!-- Added excerpt here -->
-                                <hr />
+                                <hr>
                                 <p class="card-text text-muted h6">{{ game.created_on }}</p>
                                 <p class="text-muted">Comments: {{ game.comment_count }}</p>
                             </div>
