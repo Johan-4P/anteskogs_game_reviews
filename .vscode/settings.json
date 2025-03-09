@@ -28,6 +28,7 @@
         "pinterest",
         "Procfile",
         "psycopg",
+        "pycodestyle",
         "respawn",
         "runserver",
         "setuptools",
