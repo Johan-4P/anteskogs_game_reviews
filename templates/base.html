@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}Game Reviews{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -49,9 +49,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"></li>
-                    <a class="nav-link {% if request.path == reviews_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'reviews' %}">Reviews</a>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == reviews_url %}active{% endif %}" aria-current="page" href="{% url 'reviews' %}">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
