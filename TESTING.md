@@ -21,7 +21,9 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | Page | Result | Evidence |
 | :--- | :--- | :---: |
-
+| Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png)
+| Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png)
+|
 
 ### CSS
 
@@ -29,17 +31,18 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| CSS | Pass | 
+| CSS | Pass | [CSS](media\media\images\testing-img\w3c\css.png)
 
 
 
 ### Python
 
-[Code Institute Python Linter](https://pep8ci.herokuapp.com/) was used to validate the python. I have also installed [PyCodeStyle](https://pycodestyle.pycqa.org/en/latest/intro.html#configuration) in my IDE to enable me to check my code meets PEP8 guidelines during development.
+[Code Institute Python Linter](https://pep8ci.herokuapp.com/) was used to validate the python.
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-
+| Settings.py |  | | |
+| Reviews | Pass | [Reviews-validation](media\media\images\testing-img\pep8\pep8-admin-reviews.png) 
 
 ### Lighthouse
 
