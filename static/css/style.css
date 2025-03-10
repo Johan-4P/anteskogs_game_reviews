@@ -1,9 +1,16 @@
 body {
+    background-size: cover;
+    background-color: #22577A;  
+    color: #fff;
+}
+
+.home-page {
     background: url("/static/images/gaming-background.jpg") no-repeat center center fixed;
     background-size: cover;
     background-color: #22577A;  
     color: #fff;
 }
+
 .text-box {
     background: #0000008f;
 }
@@ -11,14 +18,22 @@ body {
     width: 50%;
 }
 
-#navbar-icon {
-    background-color: white !important;
+/* Navbar Styles */
+.navbar {
+    background-color: #173548; 
+    color: white;
+
 }
+
+
+/* #navbar-icon {
+    background-color: white;
+} */
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: rgb(157, 150, 150);
 }
 
 .thin {
@@ -29,9 +44,7 @@ body {
     background-color: #fff;
 }
 
-.dark-bg {
-    background-color: #d2d7dc;
-}
+
 
 
 .card {
@@ -156,27 +169,23 @@ body {
 }
 
 
-.btn-delete {
-    background-color: #E84610 !important; 
-    color: #fff !important;
-}
 
 .btn-like {
-    color: #E84610 !important; 
-    border: none !important;
-    background: transparent !important;
+    color: #E84610; 
+    border: none;
+    background: transparent;
 }
 
 .btn-delete {
-    color: #fff !important;
-    background: #E84610 !important; 
+    color: #fff;
+    background: #E84610; 
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610 !important; 
-    background: transparent !important;
-    border: none !important;
+    color: #E84610; 
+    background: transparent;
+    border: none;
 }
 
 .faded {
@@ -196,9 +205,13 @@ ul {
 
 #id_name, #id_email, #id_subject, #id_body, #id_message {
     width: 65% !important;
-
 }
 
+/* Footer */
+.footer {
+    background-color: #173548;
+    color: #0d6efd;
+}
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */
