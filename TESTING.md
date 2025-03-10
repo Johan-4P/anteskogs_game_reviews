@@ -29,7 +29,7 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-
+| CSS | Pass | 
 
 
 
