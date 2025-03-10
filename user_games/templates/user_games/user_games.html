@@ -5,11 +5,11 @@
     <div class="row">
         {% for game in games %}
         <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
+            <div class="card-list mb-4">
+                <div class="card-body-list">
                     <div class="image-container">
                         {% if game.featured_image %}
-                        <img class="card-img-top" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
+                        <img class="img-list" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
                         {% endif %}
                     </div>
                     <a href="{% url 'review_detail' game.slug %}" class="game-link">
