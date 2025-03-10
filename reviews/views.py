@@ -11,6 +11,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class HomeView(TemplateView):
     template_name = 'reviews/home.html'
 
@@ -20,7 +21,8 @@ class GameList(generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        return Game.objects.filter(status=1).annotate(comment_count=Count('comments'))
+        return Game.objects.filter(
+            status=1).annotate(comment_count=Count('comments'))
 
 
 class GameDetail(generic.DetailView):
@@ -37,7 +39,9 @@ class GameDetail(generic.DetailView):
         game = self.get_object()
         comments = game.comments.filter(approved=True)
         pending_comments = game.comments.filter(approved=False)
-        user_comments_pending = pending_comments.filter(author=self.request.user) if self.request.user.is_authenticated else []
+        user_comments_pending = pending_comments.filter(
+            author=self.request.user
+            ) if self.request.user.is_authenticated else []
 
         context["comments"] = comments
         context["pending_comments_count"] = pending_comments.count()
@@ -45,7 +49,7 @@ class GameDetail(generic.DetailView):
         context["comment_count"] = comments.count()
         context["comment_form"] = CommentForm()
         return context
-    
+
 
 @login_required
 def upload_game(request):
@@ -55,12 +59,13 @@ def upload_game(request):
             try:
                 game = form.save(commit=False)
                 game.author = request.user
-                game.slug = slugify(game.title)  
+                game.slug = slugify(game.title)
                 game.save()
-                return redirect('reviews') 
+                return redirect('reviews')
             except Exception as e:
                 logger.error(f"Error saving game: {e}")
-                form.add_error(None, "An error occurred while saving the game.")
+                form.add_error(
+                    None, "An error occurred while saving the game.")
         else:
             logger.error("Form is not valid")
     else:
@@ -78,7 +83,8 @@ def add_comment(request, slug):
             comment.game = game
             comment.author = request.user
             comment.save()
-            messages.success(request, "Comment submitted and awaiting approval.")
+            messages.success(
+                request, "Comment submitted and awaiting approval.")
             return redirect("review_detail", slug=game.slug)
 
     else:
@@ -92,7 +98,6 @@ def edit_comment(request, comment_id):
     if request.user != comment.author:
         messages.error(request, "You are not allowed to edit this comment.")
         return redirect('review_detail', slug=comment.game.slug)
-    
     if request.method == "POST":
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
@@ -101,8 +106,8 @@ def edit_comment(request, comment_id):
             return redirect("review_detail", slug=comment.game.slug)
     else:
         form = CommentForm(instance=comment)
-    
-    return render(request, "reviews/edit_comment.html", {"form": form, "comment": comment})
+    return render
+    (request, "reviews/edit_comment.html", {"form": form, "comment": comment})
 
 
 @login_required
@@ -111,21 +116,18 @@ def delete_comment(request, comment_id):
     if request.user != comment.author:
         messages.error(request, "You are not allowed to delete this comment.")
         return redirect('review_detail', slug=comment.game.slug)
-    
     game_slug = comment.game.slug
     comment.delete()
     messages.success(request, "Comment deleted successfully.")
     return redirect("review_detail", slug=game_slug)
 
+
 @login_required
 def edit_game(request, slug):
     game = get_object_or_404(Game, slug=slug)
-    
-    
     if game.author != request.user:
         messages.error(request, "You are not allowed to edit this game.")
         return redirect('review_detail', slug=game.slug)
-
     if request.method == "POST":
         form = GameForm(request.POST, request.FILES, instance=game)
         if form.is_valid():
@@ -135,7 +137,8 @@ def edit_game(request, slug):
     else:
         form = GameForm(instance=game)
 
-    return render(request, "reviews/edit_game.html", {"form": form, "game": game})
+    return render
+    (request, "reviews/edit_game.html", {"form": form, "game": game})
 
 
 @login_required
@@ -151,7 +154,7 @@ def delete_game(request, slug):
     game_slug = game.slug
     game.delete()
     messages.success(request, "Game deleted successfully.")
-    return redirect('reviews') 
+    return redirect('reviews')
 
 
 def thanks(request):

@@ -33,9 +33,6 @@ body {
     background-color: #d2d7dc;
 }
 
-/* .main-bg {
-    background-color: #F9FAFC;
-} */
 
 .card {
     border: none;
@@ -104,6 +101,8 @@ body {
     z-index: 100;
 }
 
+/* Game Page Styles */
+
 .game-link {
     text-decoration: none;
     color: #38A3A5; 
@@ -124,6 +123,7 @@ body {
     color: lightgray;
 }
 
+/* Button Styles */
 .btn-edit {
     background-color: #22577A !important; 
     color: #fff !important;
@@ -143,13 +143,13 @@ body {
     cursor: pointer;
 }
 
-/* Hover effect for the button */
+
 .btn-modern:hover {
     background-color: #38A3A5;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); 
 }
 
-/* Active effect (when button is clicked) */
+
 .btn-modern:active {
     background-color: #57C699; 
     transform: scale(0.98); 
