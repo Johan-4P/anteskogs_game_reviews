@@ -26,8 +26,7 @@ def edit_game(request, game_id):
     else:
         form = UserGameForm(instance=game)
 
-    return render(
-        request, 'user_games/edit_game.html', {'form': form, 'game': game})
+    return render(request, 'user_games/edit_game.html', {'form': form, 'game': game})
 
 
 @login_required

@@ -6,7 +6,7 @@
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <div class="row">
+    <div class="row-list text-center">
 
         <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
@@ -14,11 +14,11 @@
                 {% for game in game_list %}
                 <div class="col-md-4">
 
-                    <div class="card mb-4 text-center">
-                        <div class="card-body">
-                            <div class="image-container">
+                    <div class="card-list mb-4 text-center">
+                        <div class="card-body-list">
+                            <div class="image-container-list">
                                 {% if game.featured_image %}
-                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
+                                <img class="img-list" src="{{ game.featured_image.url }}" alt="{{ game.title }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'review_detail' game.slug %}" class="game-link">

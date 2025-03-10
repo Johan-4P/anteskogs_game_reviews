@@ -137,8 +137,7 @@ def edit_game(request, slug):
     else:
         form = GameForm(instance=game)
 
-    return render
-    (request, "reviews/edit_game.html", {"form": form, "game": game})
+    return render(request, "reviews/edit_game.html", {"form": form, "game": game})
 
 
 @login_required
