@@ -292,6 +292,10 @@ ul {
     width: 65% !important;
 }
 
+label[for*="id_"]:required::after {
+  content: " *";
+  color: red;
+}
 /* Footer */
 .footer {
     background-color: #173548;

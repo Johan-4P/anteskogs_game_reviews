@@ -14,9 +14,9 @@ class About(models.Model):
 
 
 class ContactMeForm(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    message = models.TextField()
+    name = models.CharField(max_length=100, blank=False, null=False)
+    email = models.EmailField(blank=False, null=False)
+    message = models.TextField(blank=False, null=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
