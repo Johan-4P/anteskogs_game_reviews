@@ -2,6 +2,8 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Your Games</h2>
+
+    {% if games %}
     <div class="row">
         {% for game in games %}
         <div class="col-md-4">
@@ -24,5 +26,9 @@
         </div>
         {% endfor %}
     </div>
+    {% else %}
+    <p class="card-text">No games uploaded yet.</p>
+    <a href="{% url 'upload_game' %}" class="btn btn-modern">Upload a Game</a>
+    {% endif %}
 </div>
 {% endblock %}
