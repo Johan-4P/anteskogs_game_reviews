@@ -8,7 +8,7 @@ MAX_IMAGE_SIZE = 5 * 1024 * 1024  # 5MB
 
 # Validator function
 def validate_image_size(image):
-    if image.size > MAX_IMAGE_SIZE:
+    if hasattr(image, 'file') and image.file.size > MAX_IMAGE_SIZE:
         raise ValidationError("The image file is too large. Maximum size is 5MB.")
 
 STATUS = (

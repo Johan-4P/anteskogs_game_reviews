@@ -35,10 +35,23 @@
                 </p>
 
                 {% if user == game.author %}
-                <a href="{% url 'edit_game' slug=game.slug %}" class="btn btn-modern">Edit Game</a>
-                <a href="{% url 'delete_game' slug=game.slug %}"
-                    onclick="return confirm('Are you sure you want to delete this game?')" class="btn btn-modern btn-delete">Delete Game</a>
+                    <!-- Modal Structure -->
+                    <div id="deleteModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <h2 class="modal-title">Confirm Deletion</h2>
+                            <p class="modal-message">Are you sure you want to delete this game?</p>
+                            <div class="modal-buttons">
+                                <button class="button-ok" onclick="confirmDelete()">OK</button>
+                                <button id="cancelDelete" class="button-cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button to Trigger Modal -->
+                    <a href="{% url 'delete_game' slug=game.slug %}" id="deleteGameBtn" class="btn btn-modern btn-delete">Delete Game</a>
+                    <a href="{% url 'edit_game' game.slug %}" class="btn btn-modern">Edit Game</a>
                 {% endif %}
+
 
             </div>
         </div>
@@ -70,7 +83,7 @@
     {% if user.is_authenticated and user_comments_pending %}
     <h4>Your Comments Awaiting Approval:</h4>
     {% for comment in user_comments_pending %}
-    <div class="alert alert-warning">
+    <div class="p-2 comments text-content">
         <strong>{{ comment.author }}:</strong> {{ comment.body }}
         <p><small>{{ comment.created_on }}</small></p>
         <a href="{% url 'edit_comment' comment.id %}" class="btn btn-modern">Edit</a>

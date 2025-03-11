@@ -33,7 +33,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'anteskogs-game-reviews-c55343667d70.herokuapp.com', '127.0.0.1']
@@ -186,5 +186,5 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/list'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = {'username'}  # Replace ACCOUNT_AUTHENTICATION_METHOD
+ACCOUNT_LOGIN_METHODS = {'username'}
 ACCOUNT_EMAIL_REQUIRED = True

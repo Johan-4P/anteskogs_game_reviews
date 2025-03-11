@@ -296,6 +296,92 @@ label[for*="id_"]:required::after {
   content: " *";
   color: red;
 }
+
+/* Background overlay */
+.modal {
+  display: none; /* Modal is hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal box styling */
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.modal-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Message styling */
+.modal-message {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Button container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Button styling */
+.button-ok, .button-cancel {
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* OK button styling */
+.button-ok {
+  background-color: #28a745;
+  color: white;
+}
+
+.button-ok:hover {
+  background-color: #218838;
+}
+
+/* Cancel button styling */
+.button-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-cancel:hover {
+  background-color: #c82333;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 /* Footer */
 .footer {
     background-color: #173548;
