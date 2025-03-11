@@ -2,29 +2,15 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block title %}Upload a Game{% endblock %}
+
 {% block content %}
 <div class="container mt-5">
     <h2>Upload a Game</h2>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="file" id="imageInput" name="featured_image" />
         <button type="submit" class="btn btn-modern">Upload</button>
     </form>
-    <script>
-        document.getElementById('imageInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            const maxSize = 5 * 1024 * 1024;  // 5MB in bytes
-        
-            if (file.size > maxSize) {
-                alert("The image is too large! Maximum size is 5MB.");
-                event.target.value = '';
-            }
-        });
-        </script>
 </div>
-{% endblock %}
-
-{% block extra_js %}
-{{ form.media }}
 {% endblock %}
