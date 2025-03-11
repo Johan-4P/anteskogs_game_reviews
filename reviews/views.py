@@ -107,8 +107,7 @@ def edit_comment(request, comment_id):
             return redirect("review_detail", slug=comment.game.slug)
     else:
         form = CommentForm(instance=comment)
-    return render
-    (request, "reviews/edit_comment.html", {"form": form, "comment": comment})
+    return render(request, "reviews/edit_comment.html", {"form": form, "comment": comment})
 
 
 @login_required

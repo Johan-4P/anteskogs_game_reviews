@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from reviews.models import Game
 from .forms import UserGameForm
 from django.db.models import Count
@@ -17,9 +18,10 @@ def edit_game(request, game_id):
         return redirect('user_games:user_games')
 
     if request.method == 'POST':
-        form = UserGameForm(request.POST, instance=game)
+        form = UserGameForm(request.POST, request.FILES, instance=game)
         if form.is_valid():
             form.save()
+            messages.success(request, "Game updated successfully.")
             return redirect('user_games:user_games')
     else:
         form = UserGameForm(instance=game)
@@ -33,4 +35,5 @@ def delete_game(request, game_id):
         return redirect('user_games:user_games')
 
     game.delete()
+    messages.success(request, "Game deleted successfully.")
     return redirect('user_games:user_games')
