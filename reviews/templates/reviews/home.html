@@ -3,39 +3,40 @@
 {% block title %}Anteskog's Game Reviews{% endblock %}
 
 {% block content %}
-<div class="container mt-5 text-box home-page">
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            <img src="static/images/gamers-dont.jpg" class="rounded float-start home-img" alt="Gamers don't die, they respawn">
-        </div>
-        <div class="col-md-6">
-            <h1>Welcome to Anteskog's Game Reviews!</h1>
-            <p>This is your go-to platform for reviewing and discovering new games.</p>
-            <p>Here are some features you can explore:</p>
-            <!-- List of features -->
-            <ul>
-                <li><strong>Reviews:</strong> Read and write reviews for your favorite games.</li>
-                <li><strong>Upload a Game:</strong> Share your own games with the community.</li>
-                <li><strong>Comments:</strong> Leave your thoughts and feedback on game reviews.</li>
-                <li><strong>About:</strong> Here you can read about me and send a question.</li>
-            </ul>
-            <p>Get started by logging in or signing up!</p>
-            <p><strong>Hint:</strong>The Navbar's Logo will take you back here!.</p>
+<div class="home-page">
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="static/images/gamers-dont.jpg" class="rounded float-start home-img" alt="Gamers don't die, they respawn">
+            </div>
+            <div class="col-md-6 text-box-home">
+                <h1>Welcome to Anteskog's Game Reviews!</h1>
+                <p>This is your go-to platform for reviewing and discovering new games.</p>
+                <p>Here are some features you can explore:</p>
+                <!-- List of features -->
+                <ul>
+                    <li><strong>Reviews:</strong> Read and write reviews for your favorite games.</li>
+                    <li><strong>Upload a Game:</strong> Share your own games with the community.</li>
+                    <li><strong>Comments:</strong> Leave your thoughts and feedback on game reviews.</li>
+                    <li><strong>About:</strong> Here you can read about me and send a question.</li>
+                </ul>
+                <p>Get started by logging in or signing up!</p>
+                <p><strong>Hint:</strong>The Navbar's Logo will take you back here!.</p>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Buttons to navigate to Reviews, Login, and Sign Up -->
-<div class="mt-4 text-center">
-    <a href="{% url 'reviews' %}" class="btn btn-modern me-2">Explore Reviews</a>
-    {% if user.is_authenticated %}
-        <a href="{% url 'upload_game' %}" class="btn btn-modern">Upload a Game</a>
-        <a href="{% url 'about' %}" class="btn btn-modern">Send a Question</a>
-    {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
-        <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
-        <a href="{% url 'about' %}" class="btn btn-modern">Send a Question</a>
-    {% endif %}
+    <!-- Buttons to navigate to Reviews, Login, and Sign Up -->
+    <div class="mt-4 text-center">
+        <a href="{% url 'reviews' %}" class="btn btn-modern me-2">Explore Reviews</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'upload_game' %}" class="btn btn-modern">Upload a Game</a>
+            <a href="{% url 'about' %}" class="btn btn-modern">Send a Question</a>
+        {% else %}
+            <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
+            <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
+            <a href="{% url 'about' %}" class="btn btn-modern">Send a Question</a>
+        {% endif %}
+    </div>
 </div>
-
 {% endblock %}

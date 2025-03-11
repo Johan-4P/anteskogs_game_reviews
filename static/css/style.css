@@ -4,6 +4,9 @@ body {
     color: #fff;
 }
 
+
+
+/* Home page styles */
 .home-page {
     background: url("/static/images/gaming-background.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -11,7 +14,10 @@ body {
     color: #fff;
 }
 
-
+.text-box-home,
+.text-content {
+    background-color:#122736bb
+}
 .home-img {
     width: 50%;
 }
