@@ -61,6 +61,7 @@ def upload_game(request):
                 game.author = request.user
                 game.slug = slugify(game.title)
                 game.save()
+                messages.success(request, "Game uploaded successfully.")
                 return redirect('reviews')
             except Exception as e:
                 logger.error(f"Error saving game: {e}")

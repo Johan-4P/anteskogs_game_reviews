@@ -9,11 +9,11 @@
         <div class="col-4 text-center">
             <img src="{% static '/images/jag.jpg' %}" width="75%">
         </div>
-        <div class="col-8">
+        <div class="col-8 text-content">
             <h2>About Me</h2>
            
            <p> Hello my name is Johan and im studying to be a Full-stack developer.
-            And this is one of my projects, my third project for to be exact.</p>
+            This is one of my projects, my third project for to be exact.</p>
            <p> You can find all my projects on github, here you got a link <a href="https://github.com/Johan-4P/anteskogs_game_reviews">Johan-4P</a> .</p>
            
             <p> I hope you enjoy my projects and if you have any questions or feedback, feel free to contact me,
@@ -44,7 +44,7 @@
             <form method="post" class="styled-form">
                 {{ contact_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-modern" id="liveAlertBtn">Show live alert</button>
+                <button type="submit" class="btn btn-modern" id="liveAlertBtn">Submit</button>
             </form>
         </div>
     </div>
