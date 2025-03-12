@@ -145,38 +145,6 @@
         });
     });
 </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Open Modal
-        function openModal() {
-            document.getElementById('deleteModal').style.display = 'flex';
-        }
-
-        // Close Modal
-        function closeModal() {
-            document.getElementById('deleteModal').style.display = 'none';
-        }
-
-        // Confirm Delete
-        function confirmDelete() {
-            // Handle deletion here
-            console.log("Game deleted!");
-            closeModal();
-        }
-
-        // Attach event listener to the delete button
-        const deleteBtn = document.getElementById('deleteGameBtn');
-        if (deleteBtn) {
-            deleteBtn.addEventListener('click', openModal);
-        }
-        
-        // Add event listener to the cancel button
-        const cancelBtn = document.getElementById('cancelDelete');
-        if (cancelBtn) {
-            cancelBtn.addEventListener('click', closeModal);
-        }
-    });
-</script>
     {% block extra_js %}
     {% endblock %}
 </body>

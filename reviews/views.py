@@ -11,10 +11,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class HomeView(TemplateView):
     template_name = 'reviews/home.html'
-
 
 class GameList(generic.ListView):
     template_name = 'reviews/index.html'
@@ -23,7 +21,6 @@ class GameList(generic.ListView):
     def get_queryset(self):
         return Game.objects.filter(
             status=1).annotate(comment_count=Count('comments'))
-
 
 class GameDetail(generic.DetailView):
     queryset = Game.objects.filter(status=1)
@@ -50,7 +47,6 @@ class GameDetail(generic.DetailView):
         context["comment_form"] = CommentForm()
         return context
 
-
 @login_required
 def upload_game(request):
     if request.method == 'POST':
@@ -73,7 +69,6 @@ def upload_game(request):
         form = GameForm()
     return render(request, 'reviews/upload_game.html', {'form': form})
 
-
 @login_required
 def add_comment(request, slug):
     game = get_object_or_404(Game, slug=slug)
@@ -92,7 +87,6 @@ def add_comment(request, slug):
         messages.error(request, "Invalid request.")
         return redirect("review_detail", slug=game.slug)
 
-
 @login_required
 def edit_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -109,7 +103,6 @@ def edit_comment(request, comment_id):
         form = CommentForm(instance=comment)
     return render(request, "reviews/edit_comment.html", {"form": form, "comment": comment})
 
-
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -120,7 +113,6 @@ def delete_comment(request, comment_id):
     comment.delete()
     messages.success(request, "Comment deleted successfully.")
     return redirect("review_detail", slug=game_slug)
-
 
 @login_required
 def edit_game(request, slug):
@@ -139,22 +131,20 @@ def edit_game(request, slug):
 
     return render(request, "reviews/edit_game.html", {"form": form, "game": game})
 
-
 @login_required
 def delete_game(request, slug):
     game = get_object_or_404(Game, slug=slug)
 
-    # Control if the user is the author of the game
+
     if game.author != request.user:
         messages.error(request, "You are not allowed to delete this game.")
         return redirect('review_detail', slug=game.slug)
 
-    # Delete the game
+
     game_slug = game.slug
     game.delete()
     messages.success(request, "Game deleted successfully.")
     return redirect('reviews')
-
 
 def thanks(request):
     return render(request, 'about/thanks.html')
