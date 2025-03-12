@@ -24,9 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/games/', include('user_games.urls', namespace='user_games')), 
     path('summernote/', include('django_summernote.urls')),
-    path('reviews/', include('reviews.urls')),
     path('accounts/', include('allauth.urls')), 
     path('about/', include('about.urls'), name='about-urls'), 
     path('thanks/', views.thanks, name='thanks'),
-    path('', views.HomeView.as_view(), name='home'),  # Ensure home view is defined
+    path('', include('reviews.urls')),  # Include reviews URLs at the root level
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
