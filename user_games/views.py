@@ -5,11 +5,14 @@ from reviews.models import Game
 from .forms import UserGameForm
 from django.db.models import Count
 
+
 @login_required
 def user_games(request):
     games = Game.objects.filter(
-        author=request.user).annotate(comment_count=Count('comments')).order_by('title')  # Order by title
+        author=request.user).annotate(comment_count=Count(
+            'comments')).order_by('title')
     return render(request, 'user_games/user_games.html', {'games': games})
+
 
 @login_required
 def edit_game(request, game_id):
@@ -26,7 +29,9 @@ def edit_game(request, game_id):
     else:
         form = UserGameForm(instance=game)
 
-    return render(request, 'user_games/edit_game.html', {'form': form, 'game': game})
+    return render(
+        request, 'user_games/edit_game.html', {'form': form, 'game': game})
+
 
 @login_required
 def delete_game(request, game_id):
