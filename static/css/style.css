@@ -181,6 +181,9 @@ a:active {
 }
 
 .masthead-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
     position: relative;
     overflow: hidden;
 }
@@ -198,6 +201,7 @@ a:active {
     transform: skew(15deg);
     z-index: 100;
 }
+
 
 /* Game Page Styles */
 
@@ -392,17 +396,17 @@ label[for*="id_"]:required::after {
 }
 /* Media Queries */
 
-/* Extra small devices (phones, 600px and down)
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .masthead {
         height: 15vh;
     }
   }
-.text-content {
-    color: #fff;
-}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+
   .row {
     display: flex;
     flex-direction: column;
@@ -437,7 +441,7 @@ label[for*="id_"]:required::after {
   .card-body .date {
     font-size: 12px;
   }
-} */
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -453,7 +457,6 @@ label[for*="id_"]:required::after {
     margin-bottom: 20px;
   }
 }
-
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
