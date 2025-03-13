@@ -1,10 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
 /* General Styles */
 body {
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     background-position: center center;
     font-family: Roboto, sans-serif;
     background-color: #22577A;  
     color: #fff;
+}
+.main-content {
+  flex: 1;
 }
 
 a {
@@ -38,7 +47,7 @@ a:active {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #173548; 
+    background-color: #173548;
 }
 
 .brand {
@@ -345,6 +354,7 @@ label[for*="id_"]:required::after {
 
 /* Footer */
 .footer {
+    margin-top: auto;
     background-color: #173548;
     color: rgba(255, 255, 255, .55);
 }
@@ -391,6 +401,11 @@ label[for*="id_"]:required::after {
     .card-body .date {
         font-size: 12px;
     }
+
+    .footer {
+      padding: 10px 0;
+      font-size: 0,9rem;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

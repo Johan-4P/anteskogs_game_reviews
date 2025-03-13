@@ -1,14 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* General Styles */
 body {
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     background-position: center center;
     font-family: Roboto, sans-serif;
     background-color: #22577A;  
     color: #fff;
 }
+.main-content {
+  flex: 1;
+}
 
+a {
+    color: #38A3A5;
+    text-decoration: none;
+}
+a:hover {
+    color: #80ED99;
+}
+a:active {
+    color: #57C699;
+}
 
-
-/* Home page styles */
+/* Home Page Styles */
 .home-page {
     background: url("/static/images/gaming-background.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -18,10 +37,9 @@ body {
     margin: 0;
 }
 
-
 .text-box-home,
 .text-content {
-    background-color:#122736bb
+    background-color: #122736bb;
 }
 .home-img {
     width: 50%;
@@ -29,10 +47,8 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #173548; 
-    
+    background-color: #173548;
 }
-
 
 .brand {
     font-family: Lato, sans-serif;
@@ -49,14 +65,15 @@ body {
     background-color: #fff;
 }
 
+/* Card Styles */
 .row-list {
     display: grid;
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 20px;
-  }
-  
-  .card-list {
+}
+
+.card-list {
     width: 320px;
     height: 600px;
     margin: 20px 20px; 
@@ -67,63 +84,35 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
-  }
-  /* Pagination Styles */
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  
 }
 
-.pagination a {
-  padding: 10px 20px;
-  margin: 0 5px;
-  background-color: #38A3A5;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.card-body-list h2 {
+    font-size: 1.5rem;
 }
 
-.pagination a:hover {
-  background-color: #80ED99;
-}
-
-.pagination a:active {
-  background-color: #57C699;
-}
-
-  
-  .card-body-list h2 {
-    font-size: 1.5rem
-  }
-
-  .img-list {
+.img-list {
     width: 100%;
     height: 350px;
     object-fit: cover;
-  }
-  
-  .card-body-list {
+}
+
+.card-body-list {
     padding: 15px;
     text-align: center;
-  }
-  
-  .card-body-list h5 {
+}
+
+.card-body-list h5 {
     font-size: 18px;
     margin: 10px 0;
-  }
-  
-  .card-body-list p {
+}
+
+.card-body-list p,
+.card-body-list .date {
     font-size: 14px;
     color: #fff;
-  }
-  
-  .card-body-list .date {
-    font-size: 12px;
-    color: #fff;
-  }
-  .card {
+}
+
+.card {
     border: none;
     background-color: transparent;
 }
@@ -156,6 +145,7 @@ body {
     text-transform: uppercase;
 }
 
+/* Masthead Styles */
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -167,14 +157,14 @@ body {
 
 .masthead-text {
     background-color: #445261;
-    color: white ;
+    color: white;
     position: relative;
 }
 
 .masthead-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
 }
@@ -187,15 +177,11 @@ body {
     height: 100%;
     width: 150%;
     background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
 }
 
-
 /* Game Page Styles */
-
 .game-link {
     text-decoration: none;
     color: #38A3A5; 
@@ -236,19 +222,15 @@ body {
     cursor: pointer;
 }
 
-
 .btn-modern:hover {
     background-color: #80ED99;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); 
 }
 
-
 .btn-modern:active {
     background-color: #57C699; 
     transform: scale(0.98); 
 }
-
-
 
 .btn-like {
     color: #E84610; 
@@ -268,6 +250,7 @@ body {
     border: none;
 }
 
+/* Miscellaneous Styles */
 .faded {
     color: rgb(172, 175, 175);
 }
@@ -279,6 +262,7 @@ body {
 .alert-warning {
     width: 50%;
 }
+
 ul {
     list-style-position: inside;
 }
@@ -288,178 +272,165 @@ ul {
 }
 
 label[for*="id_"]:required::after {
-  content: " *";
-  color: red;
+    content: " *";
+    color: red;
 }
 
-/* Background overlay */
-
+/* Modal Styles */
 .modal {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  z-index: 1000;
-  animation: fadeIn 0.3s ease-in-out;
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-
-
-/* Modal box styling */
 .modal-content {
-  background: #173548;
-  padding: 20px 30px;
-  border-radius: 8px;
-  width: 400px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #173548;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Title styling */
 .modal-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* Message styling */
 .modal-message {
-  font-size: 1.1em;
-  margin-bottom: 20px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-/* Button container */
 .modal-buttons {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
-/* Button styling */
 .button-ok, .button-cancel {
-  padding: 12px 25px;
-  font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* OK button styling */
 .button-ok {
-  background-color: #28a745;
-  color: white;
+    background-color: #28a745;
+    color: white;
 }
 
 .button-ok:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
-/* Cancel button styling */
 .button-cancel {
-  background-color: #dc3545;
-  color: white;
+    background-color: #dc3545;
+    color: white;
 }
 
 .button-cancel:hover {
-  background-color: #c82333;
+    background-color: #c82333;
 }
 
-/* Fade in animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
 
 /* Footer */
 .footer {
+    margin-top: auto;
     background-color: #173548;
-    color: rgba(255,255,255,.55);
+    color: rgba(255, 255, 255, .55);
 }
-/* Media Queries */
 
-/* Extra small devices (phones, 600px and down) */
+/* Media Queries */
 @media only screen and (max-width: 600px) {
     .masthead {
         height: 15vh;
     }
-  }
+}
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
 
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+    .card {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
 
-  .card {
-    width: 90%; 
-    margin-bottom: 20px;
-  }
+    .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
 
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
+    .card-body {
+        text-align: center;
+    }
 
-  .card-body {
-    text-align: center;
-  }
+    .card-body h5 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
 
-  .card-body h5 {
-    font-size: 16px;
-    margin: 10px 0;
-  }
+    .card-body p {
+        font-size: 14px;
+    }
 
-  .card-body p {
-    font-size: 14px;
-  }
+    .card-body .date {
+        font-size: 12px;
+    }
 
-  .card-body .date {
-    font-size: 12px;
+    .footer {
+      padding: 10px 0;
+      font-size: 0,9rem;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; 
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+    }
 
-  }
-
-  .card {
-    width: 48%;
-    margin-bottom: 20px;
-  }
+    .card {
+        width: 48%;
+        margin-bottom: 20px;
+    }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 
-  .card {
-    width: 30%;
-    margin-bottom: 20px;
-  }
+    .card {
+        width: 30%;
+        margin-bottom: 20px;
+    }
 }
 
