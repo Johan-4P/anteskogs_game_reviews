@@ -23,7 +23,7 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | :--- | :--- | :---: |
 | Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png)
 | Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png)
-|
+| About |
 
 ### CSS
 
@@ -64,11 +64,7 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 ## Automated Testing
 
-Automated testing for this project was carried out with [Django TestCase](https://docs.djangoproject.com/en/4.1/topics/testing/overview/). I would write a test, run the test and fix any issues raised before running the test again to confirm it passed. When a test passed I committed it to GitHub.
 
-I also used [coverage](https://pypi.org/project/coverage/) to enable me to see where I was missing tests from to enable me to test my application more thoroughly.
-
-I have really enjoyed using unit tests for this project, and am looking forward to delving deeper into the topic to enable me to be able to test my applications more thoroughly.
 
 ### Coverage Testing
 

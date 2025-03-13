@@ -6,16 +6,7 @@ body {
     color: #fff;
 }
 
-a {
-    color: #38A3A5;
-    text-decoration: none;
-}
-a:hover {
-    color: #80ED99;
-}
-a:active {
-    color: #57C699;
-}
+
 
 /* Home page styles */
 .home-page {
@@ -39,9 +30,9 @@ a:active {
 /* Navbar Styles */
 .navbar {
     background-color: #173548; 
-    color: white;
-
+    
 }
+
 
 .brand {
     font-family: Lato, sans-serif;
@@ -392,7 +383,7 @@ label[for*="id_"]:required::after {
 /* Footer */
 .footer {
     background-color: #173548;
-    color: #0d6efd;
+    color: rgba(255,255,255,.55);
 }
 /* Media Queries */
 
