@@ -1,9 +1,16 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-size: cover;
     background-position: center center;
     font-family: Roboto, sans-serif;
     background-color: #22577A;  
     color: #fff;
+}
+
+main {
+    flex: 1;
 }
 
 a {
@@ -392,6 +399,10 @@ label[for*="id_"]:required::after {
 /* Footer */
 .footer {
     background-color: #173548;
+    color: rgba(255, 255, 255, .55);
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: auto;
 }
 /* Media Queries */
 
@@ -400,15 +411,21 @@ label[for*="id_"]:required::after {
     .masthead {
         height: 15vh;
     }
-  }
+    .footer {
+      margin-top: 35% !important;
+    }
+    .btn-modern {
+      font-size: 14px;
+    }
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
-    .col-md-4 {
+    /* .col-md-4 {
         flex: 0 0 auto;
         width: 48%;
-    }
+    } */
     .col-md-6 {
         flex: 0 0 auto;
         width: 100%;
