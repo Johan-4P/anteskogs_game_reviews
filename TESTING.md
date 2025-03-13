@@ -21,9 +21,10 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | Page | Result | Evidence |
 | :--- | :--- | :---: |
-| Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png)
-| Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png)
-| About |
+| Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png) |
+| Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png) |
+| About | Pass | [About](media\media\images\testing-img\w3c\vw3-about.png) |
+| Register | 
 
 ### CSS
 
@@ -31,7 +32,7 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| CSS | Pass | [CSS](media\media\images\testing-img\w3c\css.png)
+| CSS | Pass | [CSS](media\media\images\testing-img\w3c\css.png) |
 
 
 
@@ -41,8 +42,21 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| Settings.py |  | | |
-| Reviews | Pass | [Reviews-validation](media\media\images\testing-img\pep8\pep8-admin-reviews.png) 
+| ** Anteskog's Game Review** |
+| game-reviews/settings.py | Pass | [settings.py validation](media\media\images\testing-img\pep8\pep8-settings.py.png) |
+| game-reviews/Urls.py | Pass | [urls.py validation](media\media\images\testing-img\pep8\pep8-gv-urls.png) |
+| ** Reviews ** |
+| reviews/admin.py | Pass | [admin.py validation](media\media\images\testing-img\pep8\pep8-admin-reviews.png) |
+| reviews/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-reviews-apps.png) |
+| reviews/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-reviews-forms.png) |
+| reviews/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-py-reviews.png) |
+| reviews/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-reviews-urls.png) |
+| reviews/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-views.py-reviews.png) |
+| ** About ** |
+| about/admin.py | Pass | [admin.py](media\media\images\testing-img\pep8\pep8-about-admin.png) |
+| about/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-about-apps.png) |
+| about/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-about-forms.png) |
+
 
 ### Lighthouse
 
