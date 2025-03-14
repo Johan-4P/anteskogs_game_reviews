@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Anteskog's Game Reviews{% endblock %}
 
 {% block content %}
@@ -7,7 +7,7 @@
     <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-md-6 text-center">
-                <img src="{% static 'images/gamer_image.jpg' %}" class="rounded float-start home-img" alt="Gamers don't die, they respawn">
+                <img src="{% static 'images/gamers-dont.jpg' %}" class="rounded float-start home-img" alt="Gamers don't die, they respawn">
             </div>
             <div class="col-md-6 text-box-home">
                 <h1>Welcome to Anteskog's Game Reviews!</h1>
@@ -32,7 +32,7 @@
         <a href="{% url 'reviews' %}" class="btn btn-modern me-2">Explore Reviews</a>
         {% if user.is_authenticated %}
             <a href="{% url 'upload_game' %}" class="btn btn-modern">Upload a Game</a>
-            <a href="{% url 'about' %}" class="btn btn-modern">Send a Question</a>
+            <a href="{% url 'about' %}" class="btn btn-modern">About</a>
         {% else %}
             <a href="{% url 'account_login' %}" class="btn btn-modern login me-2">Login</a>
             <a href="{% url 'account_signup' %}" class="btn btn-modern">Sign Up</a>
