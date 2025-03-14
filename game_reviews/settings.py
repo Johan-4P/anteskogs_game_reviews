@@ -33,10 +33,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False  # Set to False to enable custom error pages
 
 ALLOWED_HOSTS = [
-    'anteskogs-game-reviews-c55343667d70.herokuapp.com', '127.0.0.1']
+    'anteskogs-game-reviews-c55343667d70.herokuapp.com', '127.0.0.1'
+]
 
 
 # Application definition

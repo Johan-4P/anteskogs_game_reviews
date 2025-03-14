@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.db.models import Count
 from .models import Game, Comment
+from django.http import Http404
 from .forms import GameForm, CommentForm
 import logging
 
@@ -26,13 +27,14 @@ class GameList(generic.ListView):
 
 
 class GameDetail(generic.DetailView):
-    queryset = Game.objects.filter(status=1)
     template_name = 'reviews/review_detail.html'
 
     def get_object(self):
-        queryset = self.get_queryset()
         slug = self.kwargs.get('slug')
-        return get_object_or_404(queryset, slug=slug)
+        game = get_object_or_404(Game, slug=slug)
+        if game.status == 0 and game.author != self.request.user:
+            raise Http404("Game not found")
+        return game
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

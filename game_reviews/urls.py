@@ -27,5 +27,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('about/', include('about.urls'), name='about-urls'),
     path('thanks/', views.thanks, name='thanks'),
-    path('', include('reviews.urls')),
+    path('', views.HomeView.as_view(), name='home'),  # Ensure home view is defined
+    path('reviews/', include('reviews.urls')),  # Include reviews URLs
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

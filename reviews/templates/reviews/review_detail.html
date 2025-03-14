@@ -9,6 +9,9 @@
             <div class="col-md-6 masthead-text">
                 <h1 class="game-title">{{ game.title }}</h1>
                 <p class="game-subtitle">{{ game.author }} | {{ game.created_on }}</p>
+                {% if game.status == 0 %}
+                <span class="badge bg-warning text-dark">Draft</span>
+                {% endif %}
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if game.featured_image %}
