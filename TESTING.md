@@ -45,21 +45,21 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | ** Anteskog's Game Review** |
 | game-reviews/settings.py | Pass | [settings.py validation](media\media\images\testing-img\pep8\pep8-settings.py.png) |
 | game-reviews/Urls.py | Pass | [urls.py validation](media\media\images\testing-img\pep8\pep8-gv-urls.png) |
-| ** Reviews ** |
+| **Reviews** |
 | reviews/admin.py | Pass | [admin.py validation](media\media\images\testing-img\pep8\pep8-admin-reviews.png) |
 | reviews/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-reviews-apps.png) |
 | reviews/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-reviews-forms.png) |
 | reviews/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-py-reviews.png) |
 | reviews/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-reviews-urls.png) |
 | reviews/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-views.py-reviews.png) |
-| ** About ** |
+| **About** |
 | about/admin.py | Pass | [admin.py](media\media\images\testing-img\pep8\pep8-about-admin.png) |
 | about/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-about-apps.png) |
 | about/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-about-forms.png) |
 | about/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-about.png) |
 | about/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-about-urls.png) |
 | about/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-about-views.png) |
-| ** User_Games ** |
+| **User_Games** |
 | user_games/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-user_games-apps.png) |
 | user_games/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-user_games-forms.png) |
 | user_games/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-user_games-models.png) |
@@ -108,9 +108,13 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 ### Testing User Stories
 
-| User Story ID | As a/an | I want to be able to ... | So that I can... | How is this achieved? | Evidence |
+| User Story ID | As a/an | I can | So that | How is this achieved? | Evidence |
 | :--- | :--- | :--- | :---| :--- | :---: |
-| **VIEWING & NAVIGATION** |
+| Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up,
+ if you click on the title you will see the content of that game. |[Navbar](media\media\images\testing-img\navbar.png), [Game-Detail](media\media\images\testing-img\game-detail.png) |
+ | Account Registration | User | Register an account | I can leave a comment. | In the Game-Detail view at the bottom its a form you can fill out and submit to leave a comment. | [Comment Section](media\media\images\testing-img\leave-comment.png) |
+ | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be abel to see our comment and you can alter it or delete it. | [Edit or Delete](media\media\images\delete-edit.png) |
+ | CRUD | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. |
 
 
 ### Full Testing
