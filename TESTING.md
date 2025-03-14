@@ -113,8 +113,9 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 | Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up,
  if you click on the title you will see the content of that game. |[Navbar](media\media\images\testing-img\navbar.png), [Game-Detail](media\media\images\testing-img\game-detail.png) |
  | Account Registration | User | Register an account | I can leave a comment. | In the Game-Detail view at the bottom its a form you can fill out and submit to leave a comment. | [Comment Section](media\media\images\testing-img\leave-comment.png) |
- | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be abel to see our comment and you can alter it or delete it. | [Edit or Delete](media\media\images\delete-edit.png) |
- | CRUD | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. |
+ | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be abel to see our comment and you can alter it or delete it. | [Edit or Delete](media\media\images\testing-img\delete-edit.png) |
+ | CRUD Part One | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Create-Comment](media\media\images\testing-img\create-comment.png), [Confirmation-Edit-Comment](media\media\images\testing-img\confirmation-edit-comment.png), [Delete-comment](media\media\images\testing-img\delete-comment.png) |
+ | CRUD Part Two | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Upload a Game](media\media\images\testing-img\create-game.png), [Confirmation-Upload](media\media\images\testing-img\confirmation-upload.png), 
 
 
 ### Full Testing
