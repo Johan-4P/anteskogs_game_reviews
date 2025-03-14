@@ -75,13 +75,23 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 | Page | Result |
 | :--- | :--- |
-
+| Home Page | ![Home Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-home-desktop.png) |
+| About Page | ![About Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-about-desktop.png) |
+| Reviews Page | ![Reviews Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-reviews-desktop.png) |
+| Upload Games Page | ![Upload Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-upload-game-desktop.png) |
+| Your Games Page | ![Your Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-your_games-desktop.png) |
+| Thank You Page | ![Thank You Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-thank-desktop.png) |
 
 #### Mobile Results
 
 | Page | Result |
 | :--- | :--- |
-
+| Home Page | ![Home Mobile Lighthouse Testing]() |
+| About Page | ![About Mobile Lighthouse Testing]() |
+| Reviews Page | ![Reviews Mobile Lighthouse Testing]() |
+| Upload Games Page | ![Upload Games Mobile Lighthouse Testing]() |
+| Your Games Page | ![Your Games Mobile Lighthouse Testing]() |
+| Thank You Page | ![Thank You Mobile Lighthouse Testing]() |
 
 
 
