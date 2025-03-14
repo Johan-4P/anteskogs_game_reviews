@@ -30,4 +30,3 @@ def about_me(request):
 
 def thanks(request):
     return render(request, 'about/thanks.html')
-    

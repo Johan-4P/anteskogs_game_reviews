@@ -56,6 +56,15 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | about/admin.py | Pass | [admin.py](media\media\images\testing-img\pep8\pep8-about-admin.png) |
 | about/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-about-apps.png) |
 | about/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-about-forms.png) |
+| about/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-about.png) |
+| about/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-about-urls.png) |
+| about/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-about-views.png) |
+| ** User_Games ** |
+| user_games/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-user_games-apps.png) |
+| user_games/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-user_games-forms.png) |
+| user_games/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-user_games-models.png) |
+| user_games/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-user_games-urls.png) |
+| user_games/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-user_games-views.png) |
 
 
 ### Lighthouse
