@@ -122,7 +122,10 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 ### Full Testing
 
 Full testing was performed on the following devices:
-
+* Laptop:
+    * Asus Tuf Gaming F15 15.6 inch screen.
+* Mobile Devices:
+    * Samsung galaxy 22 ultra.
 
 Testing was also performed using the following browsers:
 
@@ -133,6 +136,27 @@ Additional testing was carried out by friends and family on a variety of devices
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | :--- | :--- | :--- | :--- | :--- |
 | **NAVBAR** |
+| The sites logo **Anteskog's** | Redirects you to home page | Clicked logo | Redirected to home page | Pass |
+| Reviews | Takes you to the reviews page | Clicked Reviews | Taken to reviews page | Pass |
+| About | Takes you to the about page | Clicked About | Taken to about page | Pass |
+| Register | Takes you to register form | Clicked register | Taken to register form | Pass |
+| Login | Takes you to login form | Clicked login | Taken to login form | Pass |
+| **If Logged in** |
+| Upload a Game | Takes you to upload games form | Clicked upload a game | Taken to upload a games form | Pass |
+| **Home Page** |
+| Explore Reviews Button | Takes you to reviews page | Clicked explore reviews | Taken to reviews page | Pass |
+| Upload a Game Button | Takes you to upload games form | Clicked upload a game | Taken to upload a games form | Pass |
+| About Button | Takes you to the about page | Clicked About | Taken to about page | Pass |
+| **Reviews Page** |
+| Six's Post is shown with clickable title | When you click a title you goes to game-detail page | Clicked title | Taken to a game-detail view | Pass |
+| **Game-detail view** |
+| If scrolled down you will see a comment form, if filled out you will se a message thats tells you it worked and a box with your comment shows up with two buttons | Filled out form and click "Submit comment" | a text comes up with text "Comment submitted and awaiting approval | Pass |
+| Comments button edit | If clicked you will be taken to a page with a form with your comment and you will be able to edit it | Click edit | A form with my texts appear and i can edit | Pass |
+| Delete comment button 1 | If clicked a popup box will appear with text "Delete Comment - Are your sure you want to delete this comment? and two buttons 'CANCEL and DELETE' i click Cancel and go back to current page | Click cancel | The box disappear | Pass |
+| Delete comment button 2 | If clicked a popup box will appear with text "Delete Comment - Are your sure you want to delete this comment? and two buttons 'CANCEL and DELETE' i click Delete and a text with text " Comment successfully Deleted" will show | Click delete | The comment has been deleted and a text is shown | Pass |
+| **About Page** |
+| Ask questions form | Fill out the form and you will be redirected to the thanks page | Filled out the form and press submit button | Was taken to a thank you page | Pass |
+| 
 
 
 ## Bugs
