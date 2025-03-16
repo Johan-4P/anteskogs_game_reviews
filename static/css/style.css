@@ -415,21 +415,16 @@ label[for*="id_"]:required::after {
     .btn-modern {
       font-size: 14px;
     }
+    .col-md-6 {
+        display: block;
+    }
+
 }
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
-    /* .col-md-4 {
-        flex: 0 0 auto;
-        width: 48%;
-    } */
-    .col-md-6 {
-        flex: 0 0 auto;
-        width: 100%;
-        display: ruby !important;
-    }
-}
+
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

@@ -185,7 +185,7 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/list'
+LOGIN_REDIRECT_URL = '/reviews/list'  # Redirect to the reviews list page after login
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_LOGIN_METHODS = {'username'}
