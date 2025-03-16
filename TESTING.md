@@ -75,23 +75,25 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 | Page | Result |
 | :--- | :--- |
-| Home Page | ![Home Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-home-desktop.png) |
-| Reviews Page | ![Reviews Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-reviews-desktop.png) |
-| About Page | ![About Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-about-desktop.png) |
-| Upload Games Page | ![Upload Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-upload-game-desktop.png) |
-| Your Games Page | ![Your Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-your_games-desktop.png) |
-| Thank You Page | ![Thank You Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-thank-desktop.png) |
+| Home Page | ![Home Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\home-desk.png) |
+| Reviews Page | ![Reviews Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\reviews-desk.png) |
+| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\details-desk.png) |
+| About Page | ![About Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\about-desk.png) |
+| Upload Games Page | ![Upload Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\upload-desk.png) |
+| Your Games Page | ![Your Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\your-games-desk.png) |
+| Thank You Page | ![Thank You Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\thank-desk.png) |
 
 #### Mobile Results
 
 | Page | Result |
 | :--- | :--- |
-| Home Page | ![Home Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-home-mobile.png) |
-| Reviews Page | ![Reviews Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-reviews-mobile.png) |
-| About Page | ![About Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-about-mobil.png) |
-| Upload Games Page | ![Upload Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-upload-mobile.png) |
-| Your Games Page | ![Your Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-your-mobile.png) |
-| Thank You Page | ![Thank You Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\lgh-thank-mobile.png) |
+| Home Page | ![Home Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\home-mobile.png) |
+| Reviews Page | ![Reviews Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\reviews-mobile.png) |
+| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\detail-mobile.png) |
+| About Page | ![About Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\about-mobile.png) |
+| Upload Games Page | ![Upload Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\upload-mobile.png) |
+| Your Games Page | ![Your Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\your-games-mobile.png) |
+| Thank You Page | ![Thank You Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\thank-mobile.png) |
 
 
 
@@ -110,8 +112,7 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 | User Story ID | As a/an | I can | So that | How is this achieved? | Evidence |
 | :--- | :--- | :--- | :---| :--- | :---: |
-| Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up,
- if you click on the title you will see the content of that game. |[Navbar](media\media\images\testing-img\navbar.png), [Game-Detail](media\media\images\testing-img\game-detail.png) |
+| Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up, if you click on the title you will see the content of that game. |[Navbar](media\media\images\testing-img\navbar.png), [Game-Detail](media\media\images\testing-img\game-detail.png) |
  | Account Registration | User | Register an account | I can leave a comment. | In the Game-Detail view at the bottom its a form you can fill out and submit to leave a comment. | [Comment Section](media\media\images\testing-img\leave-comment.png) |
  | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be abel to see our comment and you can alter it or delete it. | [Edit or Delete](media\media\images\testing-img\delete-edit.png) |
  | CRUD Part One | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Create-Comment](media\media\images\testing-img\create-comment.png), [Confirmation-Edit-Comment](media\media\images\testing-img\confirmation-edit-comment.png), [Delete-comment](media\media\images\testing-img\delete-comment.png) |
