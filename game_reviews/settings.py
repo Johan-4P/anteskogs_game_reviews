@@ -170,6 +170,10 @@ CLOUDINARY_STORAGE = {
 SUMMERNOTE_CONFIG = {
     'attachment_storage_class':
         'cloudinary_storage.storage.MediaCloudinaryStorage',
+        'summernote': {
+            'width': '100%',
+            
+        }
 }
 
 

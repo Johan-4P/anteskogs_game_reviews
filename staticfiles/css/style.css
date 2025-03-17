@@ -421,11 +421,9 @@ label[for*="id_"]:required::after {
     .summernote-div {
       display: flex;
     }
-    .note-toolbar {
-      display: block !important;
+    .note-frame {
+      width: 100% !important;
     }
-
-
 
 }
 
