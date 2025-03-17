@@ -24,7 +24,6 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png) |
 | Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png) |
 | About | Pass | [About](media\media\images\testing-img\w3c\vw3-about.png) |
-| Register | 
 
 ### CSS
 
@@ -149,14 +148,22 @@ Additional testing was carried out by friends and family on a variety of devices
 | About Button | Takes you to the about page | Clicked About | Taken to about page | Pass |
 | **Reviews Page** |
 | Six's Post is shown with clickable title | When you click a title you goes to game-detail page | Clicked title | Taken to a game-detail view | Pass |
+| | Test to click all titles so all work as they should | Click all titles | all worked | Pass |
 | **Game-detail view** |
 | If scrolled down you will see a comment form, if filled out you will se a message thats tells you it worked and a box with your comment shows up with two buttons | Filled out form and click "Submit comment" | a text comes up with text "Comment submitted and awaiting approval | Pass |
 | Comments button edit | If clicked you will be taken to a page with a form with your comment and you will be able to edit it | Click edit | A form with my texts appear and i can edit | Pass |
 | Delete comment button 1 | If clicked a popup box will appear with text "Delete Comment - Are your sure you want to delete this comment? and two buttons 'CANCEL and DELETE' i click Cancel and go back to current page | Click cancel | The box disappear | Pass |
 | Delete comment button 2 | If clicked a popup box will appear with text "Delete Comment - Are your sure you want to delete this comment? and two buttons 'CANCEL and DELETE' i click Delete and a text with text " Comment successfully Deleted" will show | Click delete | The comment has been deleted and a text is shown | Pass |
+| If **Owner** of the game  you will see two buttons Delete and Edit  | If you click edit you goes to upload a game form there you can now edit your game | Click "Edit" | Taken to upload a game | Pass |
+| **Owner** Delete button 1 | If clicked a popup box will appear with text "Delete Game - Are your sure you want to delete this game? and two buttons 'CANCEL and DELETE' i click Cancel and go back to current page | Click cancel | The box disappear | Pass |
+| **Owner** Delete button 2 | If clicked a popup box will appear with text "Delete game - Are your sure you want to delete this game? and two buttons 'CANCEL and DELETE' i click Delete and a text with text " Game successfully Deleted" will show | Click delete | The game has been deleted and a text is shown | Pass |
 | **About Page** |
 | Ask questions form | Fill out the form and you will be redirected to the thanks page | Filled out the form and press submit button | Was taken to a thank you page | Pass |
-| 
+| **Upload a Game** | Shows a form to fill out with Title, Image, Content, Status and Excerpt | If correct a game will load up on the site | filled out the form | A new game shows on the site | Pass |
+| **Your Games** **(If logged in)** |
+| A page with your games will show | if new to the site you don't have any games, it shows a text and button with text 'upload a Game' | I click the button | Taken to upload a game form | Pass |
+| All titles a clickable | Click on all titles to know they are working | Click all titles | All worked as expected | Pass |
+
 
 
 ## Bugs
@@ -165,9 +172,13 @@ Additional testing was carried out by friends and family on a variety of devices
 
 | No | Bug | How I solved the issue | Evidence |
 |:--- | :--- | :--- | :---: |
-
+| 1 | crispy_forms_tags is not a registered tag library | Added crispy_forms and crispy_bootstrap5 to INSTALLED_APPS in settings.py and configured CRISPY_TEMPLATE_PACK |
+| 2 | Background image not displaying | Corrected the file path in CSS to use forward slashes and ensured the image is in the correct directory |
+| 3 | URL namespace 'user_games' isn't unique | Ensured the namespace for user_games is unique across the project |
+| 4 | Comments not showing pending approval status | Updated the view and template to include pending comments and their count |
 
 ### Known Bugs
 
 | No | Bug | Evidence |
 |:--- | :--- | :---: |
+| 1 | Pagination may yield inconsistent results with an unordered object_list |
