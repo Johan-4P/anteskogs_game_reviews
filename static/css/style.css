@@ -410,7 +410,7 @@ label[for*="id_"]:required::after {
         height: 15vh;
     }
     .footer {
-      margin-top: 50% !important;
+      margin-top: 55% !important;
     }
     .btn-modern {
       font-size: 14px;
@@ -423,6 +423,16 @@ label[for*="id_"]:required::after {
     }
     .note-frame {
       width: 100% !important;
+    }
+    .btn-modern {
+      margin: inherit;
+    }
+    .text-box-home, h1 {
+      margin-top: 15px;
+      margin-bottom: -5px;
+    }
+    .home-img {
+      margin-left: 25%;
     }
 
 }
