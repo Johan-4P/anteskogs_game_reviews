@@ -1,9 +1,8 @@
 # Anteskogs Game Reviews - Testing
 
-![Anteskog's Game Reviews](media\media\images\mock-up1.png)
+![Anteskog's Game Reviews](media/media/images/mock-up1.png)
 
-
-
+/
 
 [Visit Anteskog's Game Reviews Here](https://anteskogs-game-reviews-c55343667d70.herokuapp.com/)
 
@@ -21,9 +20,9 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | Page | Result | Evidence |
 | :--- | :--- | :---: |
-| Home | Pass | [Home](media\media\images\testing-img\w3c\vw3-one.png) |
-| Reviews | Pass | [Reviews-list](media\media\images\testing-img\w3c\vw3-list.png) |
-| About | Pass | [About](media\media\images\testing-img\w3c\vw3-about.png) |
+| Home | Pass | [Home](media/media/images/testing-img/w3c/vw3-one.png) |
+| Reviews | Pass | [Reviews-list](media/media/images/testing-img/w3c/vw3-list.png) |
+| About | Pass | [About](media/media/images/testing-img/w3c/vw3-about.png) |
 
 ### CSS
 
@@ -31,7 +30,7 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 
 | File | Result | Evidence |
 | :--- | :--- | :---: |
-| CSS | Pass | [CSS](media\media\images\testing-img\w3c\css.png) |
+| CSS | Pass | [CSS](media/media/images/testing-img/w3c/css.png) |
 
 
 
@@ -42,28 +41,28 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | File | Result | Evidence |
 | :--- | :--- | :---: |
 | ** Anteskog's Game Review** |
-| game-reviews/settings.py | Pass | [settings.py validation](media\media\images\testing-img\pep8\pep8-settings.py.png) |
-| game-reviews/Urls.py | Pass | [urls.py validation](media\media\images\testing-img\pep8\pep8-gv-urls.png) |
+| game-reviews/settings.py | Pass | [settings.py validation](media/media/images/testing-img/pep8/pep8-settings.py.png) |
+| game-reviews/Urls.py | Pass | [urls.py validation](media/media/images/testing-img/pep8/pep8-gv-urls.png) |
 | **Reviews** |
-| reviews/admin.py | Pass | [admin.py validation](media\media\images\testing-img\pep8\pep8-admin-reviews.png) |
-| reviews/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-reviews-apps.png) |
-| reviews/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-reviews-forms.png) |
-| reviews/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-py-reviews.png) |
-| reviews/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-reviews-urls.png) |
-| reviews/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-views.py-reviews.png) |
+| reviews/admin.py | Pass | [admin.py validation](media/media/images/testing-img/pep8/pep8-admin-reviews.png) |
+| reviews/apps.py | Pass | [apps.py](media/media/images/testing-img/pep8/pep8-reviews-apps.png) |
+| reviews/forms.py | Pass | [forms.py](media/media/images/testing-img/pep8/pep8-reviews-forms.png) |
+| reviews/models.py | Pass | [models.py](media/media/images/testing-img/pep8/pep8-models-py-reviews.png) |
+| reviews/urls.py | Pass | [urls.py](media/media/images/testing-img/pep8/pep8-reviews-urls.png) |
+| reviews/views.py | Pass | [views.py](media/media/images/testing-img/pep8/pep8-views.py-reviews.png) |
 | **About** |
-| about/admin.py | Pass | [admin.py](media\media\images\testing-img\pep8\pep8-about-admin.png) |
-| about/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-about-apps.png) |
-| about/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-about-forms.png) |
-| about/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-models-about.png) |
-| about/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-about-urls.png) |
-| about/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-about-views.png) |
+| about/admin.py | Pass | [admin.py](media/media/images/testing-img/pep8/pep8-about-admin.png) |
+| about/apps.py | Pass | [apps.py](media/media/images/testing-img/pep8/pep8-about-apps.png) |
+| about/forms.py | Pass | [forms.py](media/media/images/testing-img/pep8/pep8-about-forms.png) |
+| about/models.py | Pass | [models.py](media/media/images/testing-img/pep8/pep8-models-about.png) |
+| about/urls.py | Pass | [urls.py](media/media/images/testing-img/pep8/pep8-about-urls.png) |
+| about/views.py | Pass | [views.py](media/media/images/testing-img/pep8/pep8-about-views.png) |
 | **User_Games** |
-| user_games/apps.py | Pass | [apps.py](media\media\images\testing-img\pep8\pep8-user_games-apps.png) |
-| user_games/forms.py | Pass | [forms.py](media\media\images\testing-img\pep8\pep8-user_games-forms.png) |
-| user_games/models.py | Pass | [models.py](media\media\images\testing-img\pep8\pep8-user_games-models.png) |
-| user_games/urls.py | Pass | [urls.py](media\media\images\testing-img\pep8\pep8-user_games-urls.png) |
-| user_games/views.py | Pass | [views.py](media\media\images\testing-img\pep8\pep8-user_games-views.png) |
+| user_games/apps.py | Pass | [apps.py](media/media/images/testing-img/pep8/pep8-user_games-apps.png) |
+| user_games/forms.py | Pass | [forms.py](media/media/images/testing-img/pep8/pep8-user_games-forms.png) |
+| user_games/models.py | Pass | [models.py](media/media/images/testing-img/pep8/pep8-user_games-models.png) |
+| user_games/urls.py | Pass | [urls.py](media/media/images/testing-img/pep8/pep8-user_games-urls.png) |
+| user_games/views.py | Pass | [views.py](media/media/images/testing-img/pep8/pep8-user_games-views.png) |
 
 
 ### Lighthouse
@@ -74,25 +73,25 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 | Page | Result |
 | :--- | :--- |
-| Home Page | ![Home Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\home-desk.png) |
-| Reviews Page | ![Reviews Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\reviews-desk.png) |
-| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\details-desk.png) |
-| About Page | ![About Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\about-desk.png) |
-| Upload Games Page | ![Upload Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\upload-desk.png) |
-| Your Games Page | ![Your Games Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\your-games-desk.png) |
-| Thank You Page | ![Thank You Desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\thank-desk.png) |
+| Home Page | ![Home Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/home-desk.png) |
+| Reviews Page | ![Reviews Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/reviews-desk.png) |
+| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/details-desk.png) |
+| About Page | ![About Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/about-desk.png) |
+| Upload Games Page | ![Upload Games Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/upload-desk.png) |
+| Your Games Page | ![Your Games Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/your-games-desk.png) |
+| Thank You Page | ![Thank You Desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/thank-desk.png) |
 
 #### Mobile Results
 
 | Page | Result |
 | :--- | :--- |
-| Home Page | ![Home Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\home-mobile.png) |
-| Reviews Page | ![Reviews Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\reviews-mobile.png) |
-| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media\media\images\testing-img\lighthouse\detail-mobile.png) |
-| About Page | ![About Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\about-mobile.png) |
-| Upload Games Page | ![Upload Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\upload-mobile.png) |
-| Your Games Page | ![Your Games Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\your-games-mobile.png) |
-| Thank You Page | ![Thank You Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\thank-mobile.png) |
+| Home Page | ![Home Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/home-mobile.png) |
+| Reviews Page | ![Reviews Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/reviews-mobile.png) |
+| Reviews-detail | ![Reviews-Detail desktop Lighthouse Testing](media/media/images/testing-img/lighthouse/detail-mobile.png) |
+| About Page | ![About Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/about-mobile.png) |
+| Upload Games Page | ![Upload Games Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/upload-mobile.png) |
+| Your Games Page | ![Your Games Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/your-games-mobile.png) |
+| Thank You Page | ![Thank You Mobile Lighthouse Testing](media/media/images/testing-img/lighthouse/thank-mobile.png) |
 
 
 ## Manual Testing
@@ -101,11 +100,11 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 
 | User Story ID | As a/an | I can | So that | How is this achieved? | Evidence |
 | :--- | :--- | :--- | :---| :--- | :---: |
-| Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up, if you click on the title you will see the content of that game. |[Navbar](media\media\images\testing-img\navbar.png), [Game-Detail](media\media\images\testing-img\game-detail.png) |
- | Account Registration | User | Register an account | I can leave a comment. | In the Game-Detail view at the bottom its a form you can fill out and submit to leave a comment. | [Comment Section](media\media\images\testing-img\leave-comment.png) |
- | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be abel to see our comment and you can alter it or delete it. | [Edit or Delete](media\media\images\testing-img\delete-edit.png) |
- | CRUD Part One | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Create-Comment](media\media\images\testing-img\create-comment.png), [Confirmation-Edit-Comment](media\media\images\testing-img\confirmation-edit-comment.png), [Delete-comment](media\media\images\testing-img\delete-comment.png) |
- | CRUD Part Two | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Upload a Game](media\media\images\testing-img\create-game.png), [Confirmation-Upload](media\media\images\testing-img\confirmation-upload.png), 
+| Open a Review | User | Click on a review | I can read the full text. | After you navigate to the reviews page you will see the games lined up, if you click on the title you will see the content of that game. |[Navbar](media/media/images/testing-img/navbar.png), [Game-Detail](media/media/images/testing-img/game-detail.png) |
+ | Account Registration | User | Register an account | I can leave a comment. | In the Game-Detail view at the bottom its a form you can fill out and submit to leave a comment. | [Comment Section](media/media/images/testing-img/leave-comment.png) |
+ | Modify or delete comment on a review | User | Modify or Delete my comment | I can be involved in the conversation. | When you have submitted a comment you will be able to see your comment and you can alter it or delete it. | [Edit or Delete](media/media/images/testing-img/delete-edit.png) |
+ | CRUD Part One | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Create-Comment](media/media/images/testing-img/create-comment.png), [Confirmation-Edit-Comment](media/media/images/testing-img/confirmation-edit-comment.png), [Delete-comment](media/media/images/testing-img/delete-comment.png) |
+ | CRUD Part Two | User | Create, Read, Update and Delete my content | I can manage my own content | When the user is log in he/she can Create, Update and Delete all content that he/she is owner of. | [Upload a Game](media/media/images/testing-img/create-game.png), [Confirmation-Upload](media/media/images/testing-img/confirmation-upload.png), 
 
 
 ### Full Testing
