@@ -410,7 +410,7 @@ label[for*="id_"]:required::after {
         height: 15vh;
     }
     .footer {
-      margin-top: 35% !important;
+      margin-top: 50% !important;
     }
     .btn-modern {
       font-size: 14px;
