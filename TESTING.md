@@ -95,16 +95,6 @@ I have used Googles Lighthouse testing to test the performance, accessibility, b
 | Thank You Page | ![Thank You Mobile Lighthouse Testing](media\media\images\testing-img\lighthouse\thank-mobile.png) |
 
 
-
-## Automated Testing
-
-
-
-### Coverage Testing
-
-| Coverage for | Total | Evidence |
-| :---| :--- | :--- |
-
 ## Manual Testing
 
 ### Testing User Stories
