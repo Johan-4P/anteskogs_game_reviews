@@ -418,28 +418,15 @@ label[for*="id_"]:required::after {
     .col-md-6 {
         display: block;
     }
+    .summernote-div {
+      display: flex;
+    }
+    .note-toolbar {
+      display: block !important;
+    }
 
-    .form-group {
-        width: 100%;
-    }
-    .note-editable {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        box-sizing: border-box;
-    }
-    .note-editor {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        box-sizing: border-box;
-        display: none !important;
-    }
-    .note-editor {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto; 
-    }
+
+
 }
 
 
