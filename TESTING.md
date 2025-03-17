@@ -1,8 +1,7 @@
 # Anteskogs Game Reviews - Testing
 
-![Anteskog's Game Reviews](media/media/images/mock-up1.png)
+![Anteskog's Game Reviews](media/media/images/mockup.png)
 
-/
 
 [Visit Anteskog's Game Reviews Here](https://anteskogs-game-reviews-c55343667d70.herokuapp.com/)
 
@@ -31,7 +30,6 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | File | Result | Evidence |
 | :--- | :--- | :---: |
 | CSS | Pass | [CSS](media/media/images/testing-img/w3c/css.png) |
-
 
 
 ### Python
