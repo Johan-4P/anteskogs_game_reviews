@@ -41,6 +41,8 @@
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
         <div class="form-box">
+            <h2>Contact Me</h2>
+            <p>Fill in the form below to contact me.</p>
             <form method="post" class="styled-form">
                 {{ contact_form | crispy }}
                 {% csrf_token %}
