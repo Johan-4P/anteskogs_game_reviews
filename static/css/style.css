@@ -71,7 +71,7 @@ a:active {
   }
   
   .card-list {
-    width: 320px;
+    /* width: 320px; */
     height: 600px;
     margin: 20px 20px; 
     display: flex;
@@ -289,9 +289,9 @@ ul {
     list-style-position: inside;
 }
 
-#id_name, #id_email, #id_subject, #id_body, #id_message {
+/* #id_name, #id_email, #id_subject, #id_body, #id_message {
     width: 65% !important;
-}
+} */
 
 label[for*="id_"]:required::after {
   content: " *";
@@ -398,6 +398,9 @@ label[for*="id_"]:required::after {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .home-page {
+        height: 85vh;
+    }
     .masthead {
         height: 15vh;
     }
@@ -426,6 +429,12 @@ label[for*="id_"]:required::after {
     .home-img {
       margin-left: 25%;
     }
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
 }
 
@@ -435,10 +444,17 @@ label[for*="id_"]:required::after {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .col-md-6 {
         flex: 0 0 auto;
-        width: 50%;
+        /* width: 50%; */
     }
     .home-img {
       width: 100%;
+    }
+    .home-page {
+      height: 74vh;
+  }
+    .row {
+      display: flex;
+      justify-content: center;
     }
 }
 
@@ -449,10 +465,44 @@ label[for*="id_"]:required::after {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .home-img {
+    width: 70%;
+  }
 
   .card {
     width: 30%;
     margin-bottom: 20px;
   }
 }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container-fluid {
+    width: 75%;
+  }
+  .home-img {
+    width: 100%;
+  }
+  .home-page {
+    height: 70vh;
+  }
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+}
+
+
+/* Extra large devices (large desktops, 2000px and up) */
+@media screen and (min-width: 2000px) {
+  .container-fluid {
+    width: 45%;
+  }
+  .home-img {
+    width: 100%;
+  }
+
+  
+}
+
 
