@@ -5,9 +5,19 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
-    <div class="row-list text-center">
 
+<!-- Search section -->
+<div class="container-fluid search-box">
+    <div class="row mb-3">
+        <div class="col-12 text-center">
+            <form method="get" action="{% url 'game_reviews_search' %}">
+                <input type="text" name="q" class="search-bar" placeholder=" Search for games..." value="{{ request.GET.q }}">
+                <button type="submit" class="btn btn-modern mt-2">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row-list text-center">
         <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">

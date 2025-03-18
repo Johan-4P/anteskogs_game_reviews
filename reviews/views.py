@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
-from django.db.models import Count
+from django.db.models import Count, Q
 from .models import Game, Comment
 from django.http import Http404
 from .forms import GameForm, CommentForm
@@ -22,8 +22,17 @@ class GameList(generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        return Game.objects.filter(
-            status=1).annotate(comment_count=Count('comments'))
+        query = self.request.GET.get('q', '')
+        if query:
+            return Game.objects.filter(
+                status=1
+            ).filter(
+                Q(title__icontains=query) | Q(excerpt__icontains=query)
+            ).annotate(comment_count=Count('comments')).order_by('-created_on') 
+        else:
+            return Game.objects.filter(
+                status=1
+            ).annotate(comment_count=Count('comments')).order_by('-created_on')
 
 
 class GameDetail(generic.DetailView):

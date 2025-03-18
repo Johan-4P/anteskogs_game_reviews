@@ -394,6 +394,35 @@ label[for*="id_"]:required::after {
     text-align: center;
     margin-top: auto;
 }
+
+/* Search Bar Styles */
+.search-bar {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #000;
+}
+
+.search-bar input:focus {
+    border-color: #38A3A5;
+    box-shadow: 0 2px 6px rgba(56, 163, 165, 0.3);
+}
+
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */

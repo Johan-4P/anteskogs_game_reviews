@@ -385,6 +385,9 @@ label[for*="id_"]:required::after {
   }
 }
 
+.search-bar {
+  border-radius: 15%;
+}
 
 /* Footer */
 .footer {

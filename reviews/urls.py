@@ -4,6 +4,7 @@ from .views import HomeView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
+    path('reviews/', views.GameList.as_view(), name='game_reviews_search'),
     path('list/', views.GameList.as_view(), name='reviews'),
     path('upload/', views.upload_game, name='upload_game'),
     path('<slug:slug>/', views.GameDetail.as_view(), name='review_detail'),
