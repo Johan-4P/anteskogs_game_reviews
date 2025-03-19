@@ -63,15 +63,45 @@ a:active {
     background-color: #fff;
 }
 
+/* Search Bar Styles */
+.search-bar {
+  background-color: #1f4a66;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: inherit;
+}
+.btn-search {
+  background-color: #38A3A5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 3px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-search:hover {
+  background-color: #80ED99;
+}
+.btn-search:active {
+  background-color: #57C699;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-left: 20px;
+}
+
 .row-list {
-    display: grid;
-    justify-content: space-evenly;
     align-items: flex-start;
-    gap: 20px;
+
   }
   
   .card-list {
-    /* width: 320px; */
     height: 600px;
     margin: 20px 20px; 
     display: flex;
@@ -289,17 +319,13 @@ ul {
     list-style-position: inside;
 }
 
-/* #id_name, #id_email, #id_subject, #id_body, #id_message {
-    width: 65% !important;
-} */
 
 label[for*="id_"]:required::after {
   content: " *";
   color: red;
 }
 
-/* Background overlay */
-
+/* Modal box styling */
 .modal {
   display: none; 
   position: fixed;
@@ -315,8 +341,6 @@ label[for*="id_"]:required::after {
 }
 
 
-
-/* Modal box styling */
 .modal-content {
   background: #173548;
   padding: 20px 30px;
@@ -326,26 +350,26 @@ label[for*="id_"]:required::after {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Title styling */
+
 .modal-title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-/* Message styling */
+
 .modal-message {
   font-size: 1.1em;
   margin-bottom: 20px;
 }
 
-/* Button container */
+
 .modal-buttons {
   display: flex;
   justify-content: space-around;
 }
 
-/* Button styling */
+
 .button-ok, .button-cancel {
   padding: 12px 25px;
   font-size: 1em;
@@ -355,7 +379,7 @@ label[for*="id_"]:required::after {
   transition: background-color 0.3s;
 }
 
-/* OK button styling */
+
 .button-ok {
   background-color: #28a745;
   color: white;
@@ -365,7 +389,7 @@ label[for*="id_"]:required::after {
   background-color: #218838;
 }
 
-/* Cancel button styling */
+
 .button-cancel {
   background-color: #dc3545;
   color: white;
@@ -386,6 +410,7 @@ label[for*="id_"]:required::after {
 }
 
 
+
 /* Footer */
 .footer {
     background-color: #173548;
@@ -394,35 +419,6 @@ label[for*="id_"]:required::after {
     text-align: center;
     margin-top: auto;
 }
-
-/* Search Bar Styles */
-.search-bar {
-    margin: 20px auto;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    color: #000;
-}
-
-.search-bar input:focus {
-    border-color: #38A3A5;
-    box-shadow: 0 2px 6px rgba(56, 163, 165, 0.3);
-}
-
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */
@@ -464,6 +460,9 @@ label[for*="id_"]:required::after {
       justify-content: center;
       align-items: center;
     }
+    .img-list {
+      width: 80%;
+    }
 
 }
 
@@ -473,7 +472,6 @@ label[for*="id_"]:required::after {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .col-md-6 {
         flex: 0 0 auto;
-        /* width: 50%; */
     }
     .home-img {
       width: 100%;
@@ -510,14 +508,10 @@ label[for*="id_"]:required::after {
     width: 75%;
   }
   .home-img {
-    width: 100%;
+    width: 60%;
   }
   .home-page {
     height: 70vh;
-  }
-  .col-md-6 {
-    flex: 0 0 auto;
-    width: 30%;
   }
 }
 
