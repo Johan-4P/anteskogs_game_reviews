@@ -96,11 +96,13 @@ a:active {
   padding-left: 20px;
 }
 
+/* Row and card styles */
 .row-list {
     align-items: flex-start;
 
   }
   
+
   .card-list {
     height: 600px;
     margin: 20px 20px; 
@@ -200,6 +202,7 @@ a:active {
     text-transform: uppercase;
 }
 
+/* Masthead Styles */
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -237,10 +240,7 @@ a:active {
     z-index: 100;
 }
 
-
 /* Game Page Styles */
-
-
 
 .game-title {
     margin-top: 10%;

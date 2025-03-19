@@ -9,7 +9,7 @@
                 <button onclick="document.getElementById('id04').style.display='flex'" class="btn-delete btn-modern">Delete</button>
                 <button type="submit" class="btn btn-modern">Save</button>
             </form>
-    
+            
             <div id="id04" class="modal">
               <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
               <form class="modal-content" method="post" action="{% url 'delete_comment' comment.id %}">

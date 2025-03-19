@@ -20,7 +20,7 @@ class Game(models.Model):
     title = models.CharField(max_length=200, unique=True, blank=False, null=False)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='games_posts')
-    featured_image = CloudinaryField('image', blank=True, null=True, validators=[validate_image_size])  # Add validator here
+    featured_image = CloudinaryField('image', blank=False, null=False, validators=[validate_image_size])  # Add validator here
     content = models.TextField(blank=False, null=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)

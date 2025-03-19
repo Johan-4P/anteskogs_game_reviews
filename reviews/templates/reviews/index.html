@@ -16,14 +16,12 @@
             </form>
         </div>
     </div>
-
     <div class="row-list text-center">
         <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for game in game_list %}
                 <div class="col-md-6 col-lg-4">
-
                     <div class="card-list mb-4 text-center">
                         <div class="card-body-list">
                             <div class="image-container-list">
@@ -55,6 +53,7 @@
         </div>
     </div>
 
+    <!-- Pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
