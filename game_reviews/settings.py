@@ -172,7 +172,7 @@ SUMMERNOTE_CONFIG = {
         'cloudinary_storage.storage.MediaCloudinaryStorage',
         'summernote': {
             'width': '100%',
-            
+
         }
 }
 
@@ -189,7 +189,7 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/reviews/list'  # Redirect to the reviews list page after login
+LOGIN_REDIRECT_URL = '/reviews/list'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_LOGIN_METHODS = {'username'}

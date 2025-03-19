@@ -28,7 +28,7 @@ class GameList(generic.ListView):
                 status=1
             ).filter(
                 Q(title__icontains=query) | Q(excerpt__icontains=query)
-            ).annotate(comment_count=Count('comments')).order_by('-created_on') 
+            ).annotate(comment_count=Count('comments')).order_by('-created_on')
         else:
             return Game.objects.filter(
                 status=1
@@ -118,7 +118,9 @@ def edit_comment(request, comment_id):
             return redirect("review_detail", slug=comment.game.slug)
     else:
         form = CommentForm(instance=comment)
-    return render(request, "reviews/edit_comment.html", {"form": form, "comment": comment})
+    return render(
+        request, "reviews/edit_comment.html",
+        {"form": form, "comment": comment})
 
 
 @login_required

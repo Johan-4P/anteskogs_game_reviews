@@ -134,6 +134,7 @@ Additional testing was carried out by friends and family on a variety of devices
 | Upload a Game Button | Takes you to upload games form | Clicked upload a game | Taken to upload a games form | Pass |
 | About Button | Takes you to the about page | Clicked About | Taken to about page | Pass |
 | **Reviews Page** |
+| A search bar is placed after the navbar | Type in the game you looking for end press button and if game exists it will show up | typed a game and click button | the wanted game appear | Pass |
 | Six's Post is shown with clickable title | When you click a title you goes to game-detail page | Clicked title | Taken to a game-detail view | Pass |
 | | Test to click all titles so all work as they should | Click all titles | all worked | Pass |
 | **Game-detail view** |
