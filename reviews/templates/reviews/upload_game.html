@@ -4,12 +4,24 @@
 
 {% block title %}Upload a Game{% endblock %}
 {% block content %}
-<!-- Upload game page -->
+<!-- Upload game -->
 <div class="container mt-5">
     <h2>Upload a Game</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
+        {% if form.errors %}
+        <div class="alert alert-danger mt-3">
+            <ul>
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ field|capfirst }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <hr>
         <button type="submit" class="btn btn-modern">Upload</button>
     </form>
 </div>

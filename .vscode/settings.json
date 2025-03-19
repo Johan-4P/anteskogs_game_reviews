@@ -20,6 +20,7 @@
         "databsae",
         "dyno",
         "elephantsql",
+        "errorlist",
         "forloop",
         "getenv",
         "gunicorn",

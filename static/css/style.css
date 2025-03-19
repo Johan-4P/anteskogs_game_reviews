@@ -65,7 +65,7 @@ a:active {
 
 /* Search Bar Styles */
 .search-bar {
-  background-color: #1f4a66;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: inherit;
@@ -201,6 +201,8 @@ a:active {
     margin: 4px;
     text-transform: uppercase;
 }
+
+
 
 /* Masthead Styles */
 .masthead {
@@ -409,7 +411,14 @@ label[for*="id_"]:required::after {
   }
 }
 
-
+/* Error message for missing image */
+.image-error {
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* Footer */
 .footer {

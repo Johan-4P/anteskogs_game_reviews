@@ -66,22 +66,31 @@ class GameDetail(generic.DetailView):
 def upload_game(request):
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
+        
+        # Check if the form is valid
         if form.is_valid():
             try:
                 game = form.save(commit=False)
                 game.author = request.user
                 game.slug = slugify(game.title)
+
+                # Check if an image was uploaded; handle accordingly
+                if not request.FILES.get('image'):
+                    game.image = None  # You can set a default image or leave it as None
+                
                 game.save()
                 messages.success(request, "Game uploaded successfully.")
                 return redirect('reviews')
+
             except Exception as e:
                 logger.error(f"Error saving game: {e}")
-                form.add_error(
-                    None, "An error occurred while saving the game.")
+                form.add_error(None, "An error occurred while saving the game.")
         else:
             logger.error("Form is not valid")
+            return render(request, 'reviews/upload_game.html', {'form': form})
     else:
         form = GameForm()
+        
     return render(request, 'reviews/upload_game.html', {'form': form})
 
 

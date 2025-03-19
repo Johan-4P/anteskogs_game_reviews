@@ -19,6 +19,7 @@
     <div class="row-list text-center">
         <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
+            {% if game_list %}
             <div class="row">
                 {% for game in game_list %}
                 <div class="col-md-6 col-lg-4">
@@ -50,6 +51,11 @@
                 {% endif %}
                 {% endfor %}
             </div>
+            {% else %}
+            <div class="no-results">
+                <p>No game found</p>
+            </div>
+            {% endif %}
         </div>
     </div>
 
