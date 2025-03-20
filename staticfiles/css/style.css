@@ -1,7 +1,10 @@
+html {
+    height: 100%;
+}
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     background-size: cover;
     background-position: center center;
     font-family: Roboto, sans-serif;
@@ -30,6 +33,7 @@ a:active {
     color: #fff;
     height: 85vh;
     margin: 0;
+    margin-bottom: 15%;
 }
 
 
@@ -65,7 +69,7 @@ a:active {
 
 /* Search Bar Styles */
 .search-bar {
-  background-color: #1f4a66;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: inherit;
@@ -202,15 +206,7 @@ a:active {
     text-transform: uppercase;
 }
 
-.errorlist {
-  color: red;
-  list-style-type: none;
-  padding-left: 0;
-}
 
-.errorlist li {
-  margin-bottom: 10px;
-}
 
 /* Masthead Styles */
 .masthead {
@@ -441,7 +437,7 @@ label[for*="id_"]:required::after {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .home-page {
-        height: 85vh;
+        height: 80vh;
     }
     .masthead {
         height: 15vh;
@@ -494,7 +490,7 @@ label[for*="id_"]:required::after {
       width: 100%;
     }
     .home-page {
-      height: 74vh;
+      height: 50vh;
   }
     .row {
       display: flex;
@@ -512,6 +508,9 @@ label[for*="id_"]:required::after {
   .home-img {
     width: 70%;
   }
+  .home-page {
+    height: 50vh;
+  }
 
   .card {
     width: 30%;
@@ -528,7 +527,7 @@ label[for*="id_"]:required::after {
     width: 60%;
   }
   .home-page {
-    height: 70vh;
+    height: 50vh;
   }
 }
 
