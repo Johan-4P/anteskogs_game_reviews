@@ -22,6 +22,11 @@ I have gone through each page of the site using the Chrome Developer Tools to en
 | Home | Pass | [Home](media/media/images/testing-img/w3c/vw3-one.png) |
 | Reviews | Pass | [Reviews-list](media/media/images/testing-img/w3c/vw3-list.png) |
 | About | Pass | [About](media/media/images/testing-img/w3c/vw3-about.png) |
+| Login | Pass | [Login](media/media/images/testing-img/w3c/login-wc3.png) |
+| Signup | Fail* | [Signup](media/media/images/testing-img/w3c/signup.png) |
+| Upload Games | Fail* | [Upload Games](media/media/images/testing-img/w3c/upload-wc3.png) |
+| User Games | Pass | [User Games](media/media/images/testing-img/w3c/user-games-wc3.png) |
+| **Signup and Upload Games** | Failed because CrispyForms |
 
 ### CSS
 
