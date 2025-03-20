@@ -265,7 +265,7 @@ a:active {
 }
 
 .btn-modern {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 50px; 
     background-color: #38A3A5;
@@ -302,6 +302,16 @@ a:active {
 .btn-delete {
     color: #fff;
     background: #E84610; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px; 
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .btn-like:hover,
