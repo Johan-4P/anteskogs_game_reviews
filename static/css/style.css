@@ -458,6 +458,12 @@ label[for*="id_"]:required::after {
     .home-page {
         height: 80vh;
     }
+    .home-btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .masthead {
         height: 15vh;
     }
