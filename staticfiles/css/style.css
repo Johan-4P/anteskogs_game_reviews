@@ -531,7 +531,7 @@ label[for*="id_"]:required::after {
     justify-content: space-evenly;
   }
   .home-img {
-    width: 70%;
+    width: 65%;
   }
   .home-page {
     height: 50vh;
